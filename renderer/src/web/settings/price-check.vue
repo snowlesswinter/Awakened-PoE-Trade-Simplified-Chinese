@@ -265,6 +265,8 @@ export default defineComponent({
     "Loading leagues...": "载入赛季...",
     "Failed to load leagues": "赛季载入失败",
     "Price check Item, and follow the instructions in the error description.": "物品价格搜索, 请按错误信息指示操作.",
+    "Enable builtin browser": "启用内置浏览器",
+    "builtin_browser_warning": "我知道未来的版本可能包含可以窃取我的 POESESSID 的恶意代码",
     "Show price prediction": "显示价格预测"
   },
   "cmn-Hant": {

@@ -163,6 +163,7 @@ export default defineComponent({
     "PoE config file": "PoE配置文件",
     "Browse": "浏览",
     "Auto-download updates": "自动下载更新",
+    "Show a notification when opening PoE": "打开流放之路时显示通知",
     "Restore clipboard": "恢复剪贴板"
   },
   "cmn-Hant": {
@@ -180,6 +181,7 @@ export default defineComponent({
     "PoE config file": "PoE配置文件",
     "Browse": "瀏覽",
     "Auto-download updates": "自動下載更新",
+    "Show a notification when opening PoE": "打开流放之路时显示通知",
     "Restore clipboard": "恢復剪貼板"
   }
 }
