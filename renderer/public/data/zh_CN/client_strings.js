@@ -99,7 +99,7 @@ export default {
   CHAT_GLOBAL: /^#(?:<(?<guild_tag>.+?)> )?(?<char_name>.+?): (?<body>.+)$/,
   CHAT_PARTY: /^%(?:<(?<guild_tag>.+?)> )?(?<char_name>.+?): (?<body>.+)$/,
   CHAT_GUILD: /^&(?:<(?<guild_tag>.+?)> )?(?<char_name>.+?): (?<body>.+)$/,
-  CHAT_WHISPER_TO: /^@向 (?<char_name>.+?): (?<body>.+)$/,
-  CHAT_WHISPER_FROM: /^@來自 (?:<(?<guild_tag>.+?)> )?(?<char_name>.+?): (?<body>.+)$/,
+  CHAT_WHISPER_TO: /^@(向|To) (?<char_name>.+?): (?<body>.+)$/,
+  CHAT_WHISPER_FROM: /^@(来自|From) (?:<(?<guild_tag>.+?)> )?(?<char_name>.+?): (?<body>.+)$/,
   CHAT_WEBTRADE_GEM: /^等级 (?<gem_lvl>\d+) (?<gem_qual>\d+)% (?<gem_name>.+)$/
 }
