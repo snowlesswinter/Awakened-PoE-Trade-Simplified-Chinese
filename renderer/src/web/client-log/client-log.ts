@@ -63,8 +63,10 @@ export function handleLine (line: string) {
   entry.charName = match.groups!.char_name
   entry.body = match.groups!.body
 
+  const CN = AppConfig().language === 'zh_CN' || AppConfig().language === 'cmn-Hant'
+
   if (entry.сhannel === MessageChannel.WHISPER_FROM) {
-    if ((match = entry.body.match(TRADE_WHISPER[AppConfig().language]))) {
+    if ((match = entry.body.match(TRADE_WHISPER[(AppConfig().realm === 'pc-ggg' && CN) ? 'en' : AppConfig().language]))) {
       const [pAmount, pTag] = [
         match.groups!.price.split(' ', 1).toString(),
         match.groups!.price.split(' ').slice(1).join(' ')
