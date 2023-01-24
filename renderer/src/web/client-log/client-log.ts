@@ -99,7 +99,7 @@ export function handleLine (line: string) {
       }
 
       // console.log(entry)
-    } else if ((match = entry.body.match(TRADE_BULK_WHISPER[AppConfig().language]))) {
+    } else if ((match = entry.body.match(TRADE_BULK_WHISPER[(AppConfig().realm === 'pc-ggg' && CN) ? 'en' : AppConfig().language]))) {
       const [pAmount, pName] = [
         match.groups!.price.split(' ', 1).toString(),
         match.groups!.price.split(' ').slice(1).join(' ')
