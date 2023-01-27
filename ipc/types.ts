@@ -10,6 +10,7 @@ export interface HostConfig {
   disableUpdateDownload: boolean
   logLevel: string
   windowTitle: string
+  language: string
 }
 
 export interface ShortcutAction {
@@ -19,6 +20,9 @@ export interface ShortcutAction {
     type: 'copy-item'
     focusOverlay?: boolean
     target: string
+  } | {
+    type: 'ocr-text'
+    target: 'heist-gems'
   } | {
     type: 'trigger-event'
     target: string
@@ -71,6 +75,7 @@ export type IpcEvent =
   IpcHostConfig |
   IpcWidgetAction |
   IpcItemText |
+  IpcOcrText |
   IpcConfigChanged |
   IpcUserAction
 
@@ -142,6 +147,14 @@ type IpcItemText =
     clipboard: string
     position: { x: number, y: number }
     focusOverlay: boolean
+  }>
+
+type IpcOcrText =
+  Event<'MAIN->CLIENT::ocr-text', {
+    target: string
+    pressTime: number
+    ocrTime: number
+    paragraphs: string[]
   }>
 
 type IpcGameLog =
