@@ -644,7 +644,7 @@ function getConfigForHost (): HostConfig {
     disableUpdateDownload: config.disableUpdateDownload,
     logLevel: config.logLevel,
     windowTitle: config.windowTitle,
-    language: config.language
+    language: config.language,
     realm: config.realm,
     poesessid: config.poesessid
   }

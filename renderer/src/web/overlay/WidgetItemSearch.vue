@@ -326,7 +326,7 @@ export default defineComponent({
       showTimeout,
       makeInvisible () {
         props.config.wmFlags = ['invisible-on-blur']
-      }
+      },
       findItemInTrade
     }
   }
