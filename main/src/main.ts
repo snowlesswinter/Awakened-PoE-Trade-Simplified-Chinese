@@ -22,8 +22,6 @@ app.disableHardwareAcceleration()
 app.enableSandbox()
 
 let tray: AppTray
-export let poesessid: string
-export let realm: string
 
 app.on('ready', async () => {
   tray = new AppTray(eventPipe)
@@ -46,8 +44,7 @@ app.on('ready', async () => {
         gameConfig.readConfig(cfg.gameConfig)
         appUpdater.updateOpts(!cfg.disableUpdateDownload)
         tray.overlayKey = cfg.overlayKey
-        realm = cfg.realm
-        poesessid = cfg.poesessid
+        httpProxy.updateCookies(cfg.poesessid, cfg.realm)
       })
       uIOhook.start()
       const port = await startServer(appUpdater)
