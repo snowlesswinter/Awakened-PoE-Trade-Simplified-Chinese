@@ -1,6 +1,6 @@
 'use strict'
 
-import { app } from 'electron'
+import { app, dialog } from 'electron'
 import { uIOhook } from 'uiohook-napi'
 import { startServer, eventPipe, server } from './server'
 import { Logger } from './RemoteLogger'
@@ -15,6 +15,13 @@ import { GameLogWatcher } from './host-files/GameLogWatcher'
 import { HttpProxy } from './proxy'
 
 if (!app.requestSingleInstanceLock()) {
+  dialog.showErrorBox(
+      '未获取到锁',
+      // ----------------------
+      '未获取到锁\n' +
+      '理论上是你打开了一个其他的进程\n' +
+      '但是还在继续查找原因'
+  )
   app.exit()
 }
 
