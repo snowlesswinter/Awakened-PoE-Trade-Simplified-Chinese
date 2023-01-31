@@ -145,6 +145,9 @@ export default defineComponent({
     "Wings Revealed:": "展翅:",
     "Links:": "連線:",
     "White:": "白:",
+    "Red:": "红:",
+    "Green:": "绿:",
+    "Blue:": "蓝:",
     "Quality:": "品質:",
     "Level:": "等級:",
     "Charge:": "充能:"
@@ -157,6 +160,9 @@ export default defineComponent({
     "Wings Revealed:": "侧厅解锁:",
     "Links:": "链接:",
     "White:": "白孔:",
+    "Red:": "红孔:",
+    "Green:": "绿孔:",
+    "Blue:": "蓝孔:",
     "Quality:": "品质:",
     "Level:": "等级:",
     "Charge:": "充能:"

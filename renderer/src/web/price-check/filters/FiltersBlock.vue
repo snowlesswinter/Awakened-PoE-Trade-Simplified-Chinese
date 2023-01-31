@@ -21,6 +21,12 @@
         :filter="filters.stackSize" name="Stock:" />
       <filter-btn-numeric v-if="filters.whiteSockets"
         :filter="filters.whiteSockets" name="White:" />
+      <filter-btn-numeric v-if="filters.redSockets"
+        :filter="filters.redSockets" name="Red:" />
+      <filter-btn-numeric v-if="filters.greenSockets"
+        :filter="filters.greenSockets" name="Green:" />
+      <filter-btn-numeric v-if="filters.blueSockets"
+        :filter="filters.blueSockets" name="Blue:" />
       <filter-btn-numeric v-if="filters.gemLevel"
         :filter="filters.gemLevel" name="Level:" />
       <filter-btn-numeric v-if="filters.quality"

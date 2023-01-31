@@ -28,6 +28,9 @@ export interface ItemFilters {
   }
   linkedSockets?: FilterNumeric
   whiteSockets?: FilterNumeric
+  redSockets?: FilterNumeric
+  greenSockets?: FilterNumeric
+  blueSockets?: FilterNumeric
   corrupted?: {
     value: boolean
   }

@@ -489,6 +489,9 @@ function parseSockets (section: string[], item: ParsedItem) {
 
     item.sockets = {
       white: (sockets.split('W').length - 1),
+      red: (sockets.split('R').length - 1),
+      green: (sockets.split('G').length - 1),
+      blue: (sockets.split('B').length - 1),
       linked: undefined
     }
 
