@@ -4310,7 +4310,7 @@
 {"ref": "Molten Strike fires an additional Projectile", "better": 1, "matchers": [{"string": "【熔岩之击】可以额外发射 # 个投射物"}, {"string": "【熔岩之击】可以额外发射 1 个投射物", "value": 1}], "trade": {"ids": {"enchant": ["enchant.stat_995860222"]}}}
 {"ref": "Monster Level: #", "better": 1, "matchers": [{"string": "怪物等级：#"}], "trade": {"ids": {"explicit": ["explicit.stat_284496119"], "implicit": ["implicit.stat_284496119"]}}}
 {"ref": "Monsters and Chests in your Maps have #% chance to drop Items with +1 to Item Level", "better": 1, "matchers": [{"string": "地图内的怪物和宝箱掉落的物品有 #% 的几率 +1 物品等级"}], "trade": {"ids": {"explicit": ["explicit.stat_1238581103"]}}}
-{"ref": "Monsters are Hexproof", "better": 1, "fromAreaMods": true, "fromHeistAreaMods": true, "matchers": [{"string": "怪物免疫诅咒"}], "trade": {"ids": {"explicit": ["explicit.stat_4154059009"], "fractured": ["fractured.stat_4154059009"]}}}
+{"ref": "Monsters are Hexproof", "better": 1, "fromAreaMods": true, "fromHeistAreaMods": true, "matchers": [{"string": "怪物免疫诅咒"}, {"string": "怪物无法魔蛊"}], "trade": {"ids": {"explicit": ["explicit.stat_4154059009"], "fractured": ["fractured.stat_4154059009"]}}}
 {"ref": "Monsters are Immune to randomly chosen Elemental Ailments or Stun", "better": 1, "matchers": [{"string": "怪物免疫元素异常状态和晕眩"}], "trade": {"ids": {"explicit": ["explicit.stat_2355312681"]}}}
 {"ref": "Monsters are Unaffected by Shock", "better": 1, "matchers": [{"string": "怪物未受感电影响"}], "trade": {"ids": {"explicit": ["explicit.stat_2453321622"]}}}
 {"ref": "Monsters cannot be Stunned", "better": 1, "fromAreaMods": true, "fromHeistAreaMods": true, "matchers": [{"string": "怪物免疫晕眩"}], "trade": {"ids": {"explicit": ["explicit.stat_1041951480"], "fractured": ["fractured.stat_1041951480"]}}}
