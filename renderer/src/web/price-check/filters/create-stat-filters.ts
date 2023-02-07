@@ -174,7 +174,7 @@ export function calculatedStatToFilter (
         ? FilterTag.Enchant
         : FilterTag.Variant,
       oils: decodeOils(calc),
-      sources,
+      sources: sources,
       option: {
         value: sources[0].contributes!.value
       },
@@ -194,7 +194,7 @@ export function calculatedStatToFilter (
     text: translation.string,
     tag: (type as unknown) as FilterTag,
     oils: decodeOils(calc),
-    sources,
+    sources: sources,
     roll: undefined,
     disabled: true
   }
@@ -276,7 +276,7 @@ export function calculatedStatToFilter (
       bounds: (item.rarity === ItemRarity.Unique && roll.min !== roll.max && calc.stat.better !== StatBetter.NotComparable)
         ? filterBounds
         : undefined,
-      dp,
+      dp: dp,
       isNegated: false,
       tradeInvert: calc.stat.trade.inverted
     }
