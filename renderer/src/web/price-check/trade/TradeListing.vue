@@ -16,27 +16,27 @@
         <thead>
           <tr class="text-left">
             <th class="trade-table-heading">
-              <div class="px-2">{{ t('Price') }}</div>
+              <div class="px-2" style="width: max-content;">{{ t('Price') }}</div>
             </th>
             <th v-if="item.stackSize" class="trade-table-heading">
-              <div class="px-2">{{ t('Stock') }}</div>
+              <div class="px-2" style="width: max-content;">{{ t('Stock') }}</div>
             </th>
             <th v-if="filters.itemLevel" class="trade-table-heading">
-              <div class="px-2">{{ t('iLvl') }}</div>
+              <div class="px-2" style="width: max-content;">{{ t('iLvl') }}</div>
             </th>
             <th v-if="item.category === 'Gem'" class="trade-table-heading">
-              <div class="px-2">{{ t('Level') }}</div>
+              <div class="px-2" style="width: max-content;">{{ t('Level') }}</div>
             </th>
             <th v-if="filters.quality || item.category === 'Gem'" class="trade-table-heading">
-              <div class="px-2">{{ t('Quality') }}</div>
+              <div class="px-2" style="width: max-content;">{{ t('Quality') }}</div>
             </th>
             <th class="trade-table-heading" :class="{ 'w-full': !showSeller }">
               <div class="pr-2 pl-4">
-                <span class="ml-1" style="padding-left: 0.375rem;">{{ t('Listed') }}</span>
+                <span class="ml-1" style="padding-left: 0.375rem; width: max-content;">{{ t('Listed') }}</span>
               </div>
             </th>
             <th v-if="showSeller" class="trade-table-heading w-full">
-              <div class="px-2">{{ t('Seller') }}</div>
+              <div class="px-2" style="width: max-content;">{{ t('Seller') }}</div>
             </th>
           </tr>
         </thead>
