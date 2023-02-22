@@ -35,7 +35,7 @@
     "updates.latest": "您正在使用最新版本",
     "updates.error": "检查更新时出错",
     "updates.checking": "正在检查更新",
-    "updates.downloading": "下载\u2026",
+    "updates.downloading": "下载中\u2026",
     "updates.available": "有更新: {0}",
     "updates.never_checked": "上次检查更新时间: never",
     "updates.last_checked": "上次检查更新时间: {0}",
