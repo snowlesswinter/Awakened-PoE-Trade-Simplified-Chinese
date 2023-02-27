@@ -76,7 +76,7 @@ import ItemQuickPrice from '@/web/ui/ItemQuickPrice.vue'
 import Widget from './Widget.vue'
 import { BaseType, ITEM_BY_REF, ITEMS_ITERATOR, CLIENT_STRINGS as _$, ALTQ_GEM_NAMES, ITEM_BY_TRANSLATED } from '@/assets/data'
 import { AppConfig } from '@/web/Config'
-import { findPriceByQuery, autoCurrency } from '@/web/background/Prices'
+import { usePoeninja, CurrencyValue } from '@/web/background/Prices'
 import { Host } from '@/web/background/IPC'
 
 interface SelectedItem {
@@ -84,7 +84,7 @@ interface SelectedItem {
   icon: string
   discr?: string
   chaos?: number
-  price?: ReturnType<typeof autoCurrency>
+  price?: CurrencyValue
   variant ?: string
 }
 
@@ -239,6 +239,7 @@ export default defineComponent({
   setup (props) {
     const wm = inject<WidgetManager>('wm')!
     const { t } = useI18n()
+    const { findPriceByQuery, autoCurrency } = usePoeninja()
 
     const showTimeout = shallowRef<{ reset:() => void } | null>(null)
 
