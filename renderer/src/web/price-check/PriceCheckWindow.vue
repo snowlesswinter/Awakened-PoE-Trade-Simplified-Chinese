@@ -72,8 +72,8 @@ import { useI18n } from 'vue-i18n'
 import CheckedItem from './CheckedItem.vue'
 import BackgroundInfo from './BackgroundInfo.vue'
 import { MainProcess, Host } from '@/web/background/IPC'
-import { xchgRate } from '../background/Prices'
-import { selected as league } from '@/web/background/Leagues'
+import { usePoeninja } from '../background/Prices'
+import { useLeagues } from '@/web/background/Leagues'
 import { AppConfig } from '@/web/Config'
 import { ItemCategory, ItemRarity, parseClipboard, ParsedItem } from '@/parser'
 import RelatedItems from './related-items/RelatedItems.vue'
@@ -109,6 +109,7 @@ export default defineComponent({
   },
   setup (props) {
     const wm = inject<WidgetManager>('wm')!
+    const { xchgRate } = usePoeninja()
 
     nextTick(() => {
       props.config.wmWants = 'hide'
@@ -179,12 +180,13 @@ export default defineComponent({
       }
     })
 
-    const title = computed(() => league.value || 'Awakened PoE Trade Simplified Chinese')
+    const leagues = useLeagues()
+    const title = computed(() => leagues.selectedId.value || 'Awakened PoE Trade')
     const stableOrbCost = computed(() => (xchgRate.value) ? Math.round(xchgRate.value) : null)
     const isBrowserShown = computed(() => props.config.wmFlags.includes('has-browser'))
     const overlayKey = computed(() => AppConfig().overlayKey)
     const showCheckPos = computed(() => wm.active.value && props.config.showCursor)
-    const isLeagueSelected = computed(() => Boolean(league.value))
+    const isLeagueSelected = computed(() => Boolean(leagues.selectedId.value))
     const clickPosition = computed(() => {
       if (isBrowserShown.value) {
         return 'inventory'
@@ -271,20 +273,6 @@ export default defineComponent({
     "parse_error": "Произошла ошибка при парсинге предмета",
     "parse_error_msg": "Скорее всего, это ошибка, и вы можете сообщить о ней на GitHub.",
     "Press {0} to switch between browser and game.": "Нажмите {0} для перехода между браузером/игрой."
-  },
-  "zh_CN": {
-    "unknown_item": "未知物品",
-    "unknown_item_msg": "若此为赛季物品，或将在下一版本更新中支持。",
-    "parse_error": "分析物品错误",
-    "parse_error_msg": "有可能是一个BUG，请至GitHub提交错误。",
-    "Press {0} to switch between browser and game.": "请按 {0} 在浏览器和游戏之间切换。"
-  },
-  "cmn-Hant": {
-    "unknown_item": "未知物品",
-    "unknown_item_msg": "若此為賽季物品，或將在下一版本更新中支持。",
-    "parse_error": "分析物品錯誤",
-    "parse_error_msg": "有可能是一個BUG，請至GitHub提交錯誤。",
-    "Press {0} to switch between browser and game.": "請按 {0} 在瀏覽器和遊戲之間切換。"
   }
 }
 </i18n>
