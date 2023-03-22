@@ -3,9 +3,9 @@ import { createGlobalState } from '@vueuse/core'
 import { AppConfig, poeWebApi } from '@/web/Config'
 import { Host } from './IPC'
 
-// pc-ggg, pc-garena
+// pc-ggg, pc-garena, pc-tencent
 // const PERMANENT_SC = ['Standard', '標準模式']
-const PERMANENT_HC = ['Hardcore', '專家模式']
+const PERMANENT_HC = ['Hardcore', '專家模式', '专家模式']
 
 interface ApiLeague {
   id: string
