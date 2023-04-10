@@ -19,15 +19,6 @@ export class OverlayWindow {
     private poeWindow: GameWindow,
     proxy: HttpProxy
   ) {
-    if (process.platform === 'win32' && !systemPreferences.isAeroGlassEnabled()) {
-      dialog.showErrorBox(
-        'Windows 7 - Aero',
-        // ----------------------
-        '您必须在“外观和个性化”中启用Windows Aero (简中作者不知道这是啥).\n' +
-        '需要创建透明覆盖窗口.'
-      )
-    }
-
     this.server.onEventAnyClient('OVERLAY->MAIN::focus-game', this.assertGameActive)
     this.poeWindow.on('active-change', this.handlePoeWindowActiveChange)
     this.poeWindow.onAttach(this.handleOverlayAttached)
