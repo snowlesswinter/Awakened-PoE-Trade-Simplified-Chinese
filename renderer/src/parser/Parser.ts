@@ -193,13 +193,9 @@ function normalizeName (item: ParserState) {
 function getInfo (item: ParserState, ns: BaseType['namespace']) {
   let info: BaseType[] | undefined
   if (ns === 'CAPTURED_BEAST' || ns === 'ITEM') {
-    info = (AppConfig().realm === 'pc-ggg')
-      ? ITEM_BY_REF(ns, item.baseType ?? item.name)
-      : ITEM_BY_TRANSLATED(ns, item.baseType ?? item.name)
+    info = ITEM_BY_TRANSLATED(ns, item.baseType ?? item.name) ?? ITEM_BY_REF(ns, item.baseType ?? item.name)
   } else {
-    info = (AppConfig().realm === 'pc-ggg')
-      ? ITEM_BY_REF(ns, item.name)
-      : ITEM_BY_TRANSLATED(ns, item.name)
+    info = ITEM_BY_TRANSLATED(ns, item.name) ?? ITEM_BY_REF(ns, item.name)
   }
   return info
 }
