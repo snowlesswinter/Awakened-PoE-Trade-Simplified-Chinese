@@ -38,7 +38,7 @@
     <div v-if="showSupportLinks" class="mt-auto border border-dashed p-2">
       <div class="mb-1">{{ t('Support development on') }} <a href="https://patreon.com/awakened_poe_trade" class="inline-flex align-middle animate__animated animate__fadeInRight" target="_blank"><img class="inline h-5" src="/images/Patreon.svg"></a></div>
       <div class="mb-1">{{ t('Support development CN on') }} <a href="https://afdian.net/a/APTSimplifiedChinese/plan" class="inline-flex align-middle animate__animated animate__fadeInRight" target="_blank"><img class="inline h-5" src="/images/aifadain.png"></a></div>
-      <i18n-t keypath="This tool relies on {0} and {1}, consider support them as well" tag="div">
+      <i18n-t keypath="app.thanks_3rd_party" tag="div">
         <a href="https://poeprices.info" target="_blank" class="bg-gray-900 px-1 rounded">poeprices.info</a>
         <a href="https://poe.ninja/support" target="_blank" class="bg-gray-900 px-1 rounded">poe.ninja</a>
       </i18n-t>
@@ -178,7 +178,7 @@ export default defineComponent({
           AppConfig().language !== 'en' ||
           !leagues.selected.value!.isPopular) return false
 
-      if (presets.value.active === 'Base item') return false
+      if (presets.value.active === 'filters.preset_base_item') return false
 
       return props.item.rarity === ItemRarity.Rare &&
         props.item.category !== ItemCategory.Map &&
@@ -245,17 +245,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<i18n>
-{
-  "ru": {
-    "This tool relies on {0} and {1}, consider support them as well": "Это приложение полагается на сайт {1}, можете поддержать и его"
-  },
-  "zh_CN": {
-    "This tool relies on {0} and {1}, consider support them as well": "此工具基于 {0} 及 {1}, 请支持他们"
-  },
-  "chm-Hant": {
-    "This tool relies on {0} and {1}, consider support them as well": "此工具基於 {0} 及 {1}, 請支持他們"
-  }
-}
-</i18n>

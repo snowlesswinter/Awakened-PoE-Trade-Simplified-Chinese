@@ -4,10 +4,10 @@
     <p class="text-gray-500">{{ updateInfo.str2 }}</p>
   </div>
   <div v-if="loadingLeagues" class="pt-2 px-4">
-    <i class="fas fa-info-circle text-gray-600"></i> {{ t('Loading leagues...') }}</div>
+    <i class="fas fa-info-circle text-gray-600"></i> {{ t('app.leagues_loading') }}</div>
   <ui-error-box class="mx-4 mt-4" v-else-if="leaguesError">
-    <template #name>{{ t('Failed to load leagues') }}</template>
-    <p>{{ t('leagues_failed') }}</p>
+    <template #name>{{ t('app.leagues_failed') }}</template>
+    <p>{{ t('leagues_failed_help') }}</p>
     <template #actions>
       <button class="btn" @click="retry">{{ t('Retry') }}</button>
       <button class="btn" @click="openCaptcha">{{ t('Browser') }}</button>
@@ -59,26 +59,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<i18n>
-{
-  "en": {
-    "leagues_failed": "Make sure the realm is not under maintenance. Also try clicking on the \"Browser\" button, you may need to complete a CAPTCHA there."
-  },
-  "ru": {
-    "Loading leagues...": "Загрузка лиг...",
-    "Failed to load leagues": "Не удалось загрузить лиги",
-    "leagues_failed": "Убедитесь, что сервера не находятся на обслуживании. Попробуйте нажать на кнопку \"Браузер\", возможно, там будет CAPTCHA."
-  },
-  "zh_CN": {
-    "Loading leagues...": "正在载入赛季",
-    "Failed to load leagues": "载入赛季失败",
-    "leagues_failed": "请确认服务器是否维护中。同时点击 \"浏览器\" 按钮前往人机验证。"
-  },
-  "cmn-Hant": {
-    "Loading leagues...": "正在載入聯盟",
-    "Failed to load leagues": "載入聯盟失敗",
-    "leagues_failed": "請確認服務器是否維護中。同時點擊 \"瀏覽器\" 按鈕前往人機驗證。"
-  }
-}
-</i18n>
