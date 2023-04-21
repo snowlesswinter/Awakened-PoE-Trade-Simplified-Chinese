@@ -31,7 +31,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { useI18nNs } from '@/web/i18n'
 import { configProp, findWidget } from '../utils'
 import type { ItemCheckWidget } from '@/web/overlay/interfaces'
 import { STATS_ITERATOR, STAT_BY_MATCH_STR } from '@/assets/data'

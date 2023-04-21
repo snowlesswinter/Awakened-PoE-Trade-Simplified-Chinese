@@ -13,14 +13,14 @@
       <div class="flex-1 mb-1">{{ t('realm') }}</div>
       <div class="flex gap-x-4">
         <ui-radio v-model="realm" value="pc-ggg">{{ t('realm_intl') }}</ui-radio>
-        <ui-radio v-model="realm" value="pc-garena">{{ t('Garena') }}</ui-radio>
+        <ui-radio v-model="realm" value="pc-garena">{{ t('realm_garena') }}</ui-radio>
       </div>
     </div>
     <div class="mb-4" v-if="language === 'zh_CN'">
       <div class="flex-1 mb-1">{{ t('Realm') }}</div>
       <div class="flex gap-x-4">
         <ui-radio v-model="realm" value="pc-ggg">{{ t('realm_intl') }}</ui-radio>
-        <ui-radio v-model="realm" value="pc-tencent">{{ t('tencent') }}</ui-radio>
+        <ui-radio v-model="realm" value="pc-tencent">{{ t('realm_tencent') }}</ui-radio>
         <div class="flex gap-x-1" v-show="realm === 'pc-tencent'">
           <div :class="{ 'text-red-500': poesessid.length !== 32 }">{{ t('POESESSID') }}</div>
           <span><input v-model="poesessid" class="rounded bg-gray-900 px-2 flex-1"></span>

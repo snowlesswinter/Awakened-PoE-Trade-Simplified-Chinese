@@ -70,14 +70,14 @@
       </div>
     </div>
     <div class="mb-2">
-      <div class="flex-1 mb-1">{{ t(':show_prediction') }}</div>
+      <div class="flex-1 mb-1">{{ t(':select_offline') }}</div>
       <div class="mb-4 flex">
         <ui-radio v-model="offline" :value="false" class="mr-4">{{ t('Yes') }}</ui-radio>
         <ui-radio v-model="offline" :value="true">{{ t('No') }}</ui-radio>
       </div>
     </div>
     <div class="mb-2">
-      <div class="flex-1 mb-1">{{ t('Show price prediction') }} <span class="bg-gray-700 px-1 rounded">www.poeprices.info</span></div>
+      <div class="flex-1 mb-1">{{ t(':show_prediction') }} <span class="bg-gray-700 px-1 rounded">www.poeprices.info</span></div>
       <div class="mb-4 flex">
         <ui-radio v-model="requestPricePrediction" :value="true" class="mr-4">{{ t('Yes') }}</ui-radio>
         <ui-radio v-model="requestPricePrediction" :value="false">{{ t('No') }}</ui-radio>
