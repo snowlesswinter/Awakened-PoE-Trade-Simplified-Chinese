@@ -166,6 +166,13 @@
     "accessory_trinket": "饰品"
   },
   "filters": {
+    "tag_implicit": "固定",
+    "tag_explicit": "随机",
+    "tag_enchant": "附魔",
+    "tag_crafted": "工艺",
+    "tag_fractured": "破裂",
+    "tag_scourge": "天灾",
+
     "selected_some": "词缀: {0}/{1}",
     "selected_none": "忽略词缀",
     "hidden_toggle": "已隐藏",
