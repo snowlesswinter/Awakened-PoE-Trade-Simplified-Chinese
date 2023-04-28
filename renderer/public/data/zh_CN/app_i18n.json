@@ -115,6 +115,7 @@
     "not_corrupted": "未腐化",
     "mod_tier": "等阶: {0}",
     "mod_rank": "级别: {0}",
+    "mod_pseudo": "词缀",
     "mod_implicit": "基底",
     "mod_fractured": "分裂",
     "mod_explicit": "固定",
@@ -166,13 +167,6 @@
     "accessory_trinket": "饰品"
   },
   "filters": {
-    "tag_implicit": "固定",
-    "tag_explicit": "随机",
-    "tag_enchant": "附魔",
-    "tag_crafted": "工艺",
-    "tag_fractured": "破裂",
-    "tag_scourge": "天灾",
-
     "selected_some": "词缀: {0}/{1}",
     "selected_none": "忽略词缀",
     "hidden_toggle": "已隐藏",
@@ -190,6 +184,12 @@
     "hide_anointment": "买家可能会更改涂油",
     "hide_for_crafting": "当你只想查询基底价格的时候才选取",
     "hide_empty_mod": "当物品有6个词缀(其中1个是工艺词缀)，或是5个词缀才选取",
+    "tag_implicit": "固定",
+    "tag_explicit": "随机",
+    "tag_enchant": "附魔",
+    "tag_crafted": "工艺",
+    "tag_fractured": "破裂",
+    "tag_scourge": "天灾",
     "tag_variant": "种类",
     "tag_corrupted": "已腐化",
     "tag_synthesised": "忆境",
@@ -240,8 +240,7 @@
     "downloads_page": "打开下载页面",
     "installed_on_exit": "将在退出时自动安装",
     "download_manually": "您可以从Github下载",
-    "download_disabled": "您已禁用自动更新",
-    "auto_download": "自动下载更新"
+    "download_disabled": "您已禁用自动更新"
   },
   "widget_menu": {
     "add": "添加组件\u2026",
@@ -325,8 +324,6 @@
     "font_size" :"字体大小",
     "overlay_bg" :"背景,当APT窗口可点击时",
     "overlay_bg_none" :"透明度",
-    "overlay_bg_exclusive" :"在浮动层及价格查询显示",
-    "overlay_bg_itself" :"仅在浮动层显示",
     "overlay_bg_focus_game" :"点击背景回到游戏",
     "poe_log_file" :"PoE日志文件",
     "poe_cfg_file" :"PoE配置文件",

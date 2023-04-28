@@ -14,7 +14,7 @@
         :item-base="item.info"
       >
         <template #item v-if="isValuableBasetype">
-          <span class="text-gray-400">{{ t(':base_item') }}</span>
+          <span class="text-gray-400">{{ t('trade_result.base_item') }}</span>
         </template>
       </item-quick-price>
       <div v-if="trend.change" @click="openNinja" :class="$style['trend-btn']">
