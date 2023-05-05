@@ -315,14 +315,3 @@ export default defineComponent({
               0 1px 2px 0 rgba(0, 0, 0, 0.75);
 }
 </style>
-
-<i18n>
-{
-  "ru": {
-    "hide": "скрыть",
-    "edit": "редактировать",
-    "move": "переместить",
-    "delete": "удалить"
-  }
-}
-</i18n>

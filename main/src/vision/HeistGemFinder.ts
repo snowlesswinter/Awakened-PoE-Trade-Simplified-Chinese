@@ -2,6 +2,7 @@ import fs from 'fs/promises'
 import Bmp from '@wokwi/bmp-ts'
 import * as Bindings from './wasm-bindings'
 import { cv, tessApi } from './wasm-bindings'
+import type { Logger } from '../RemoteLogger'
 import {
   findNonZeroWeights,
   groupWeightedPoints,
@@ -30,10 +31,12 @@ export class HeistGemFinder {
   private constructor (
     private readonly needleMat: any,
     private readonly hsvMin: any,
-    private readonly hsvMax: any
+    private readonly hsvMax: any,
+    private logger: Logger,
   ) {}
 
-  static async create (binDir: string): Promise<HeistGemFinder> {
+
+  static async create (binDir: string,logger: Logger): Promise<HeistGemFinder> {
     const needleImg = Bmp.decode(await fs.readFile(binDir + '/heist-lock.bmp'), { toRGBA: true })
     const needleMat = Bindings.cvMatFromImage(needleImg)
     cv.cvtColor(needleMat, needleMat, cv.COLOR_RGBA2GRAY)
@@ -42,8 +45,7 @@ export class HeistGemFinder {
     hsvMin.data.set(TEXT_HSV_MIN)
     const hsvMax = new cv.Mat(3, 1, cv.CV_8U)
     hsvMax.data.set(TEXT_HSV_MAX)
-
-    return new HeistGemFinder(needleMat, hsvMin, hsvMax)
+    return new HeistGemFinder(needleMat, hsvMin, hsvMax, logger)
   }
 
   ocrScreenshot (screenshot: ImageData): OcrResult {
@@ -103,7 +105,8 @@ export class HeistGemFinder {
         tessApi.Recognize()
       })
       const text = tessApi.GetUTF8Text().replace(/[()辅（）]/g,'').trim()
-      console.log(text + '\n')
+      this.logger.write(text + '\n')
+      this.logger.write(`1123455`)
       const confidence = tessApi.MeanTextConf()
       if (text.length > 0 && confidence > 30) {
         recognizedLines.push({ text, confidence })
@@ -120,7 +123,7 @@ export class HeistGemFinder {
       linesMax: Math.max(...linesWeight),
       recognized: recognizedLines
     }
-    console.log(results)
+    this.logger.write(results + '\n')
     return results
   }
 }

@@ -54,7 +54,7 @@ function fmtTime (millis: number) {
 }
 
 export default defineComponent({
-  name: 'About',
+  name: 'settings.about',
   inheritAttrs: false,
   setup () {
     const { t } = useI18n()

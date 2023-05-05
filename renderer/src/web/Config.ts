@@ -284,27 +284,6 @@ export const defaultConfig = (): Config => ({
         { id: 2, name: '', text: '"无法再生"', hotkey: null }
       ]
     } as widget.StashSearchWidget,
-    // {
-    //   wmId: 102,
-    //   wmType: 'stash-search',
-    //   wmTitle: 'Dump sorting',
-    //   wmWants: 'hide',
-    //   wmZorder: 102,
-    //   wmFlags: ['invisible-on-blur'],
-    //   anchor: {
-    //     pos: 'tl',
-    //     x: 34,
-    //     y: 56
-    //   },
-    //   entries: [
-    //     { id: 1, name: '', text: 'Currency', hotkey: null },
-    //     { id: 2, name: '', text: '"Divination Card"', hotkey: null },
-    //     { id: 3, name: '', text: 'Fossil', hotkey: null },
-    //     { id: 4, name: '', text: '"Map Tier"', hotkey: null },
-    //     { id: 5, name: '', text: '"Map Device" "Rarity: Normal"', hotkey: null },
-    //     { id: 6, name: '', text: 'Tane Laboratory', hotkey: null }
-    //   ]
-    // } as widget.StashSearchWidget,
     {
       wmId: 103,
       wmType: 'image-strip',
