@@ -11,7 +11,7 @@ import { linesToStatStrings, tryParseTranslation, getRollOrMinmaxAvg } from './s
 import { ItemCategory } from './meta'
 import { IncursionRoom, ParsedItem, ItemInfluence, ItemRarity } from './ParsedItem'
 import { magicBasetype } from './magic-name'
-import { isModInfoLine, groupLinesByMod, parseModInfoLine, parseModType, ModifierInfo, ParsedModifier, ENCHANT_LINE, SCOURGE_LINE } from './advanced-mod-desc'
+import { isModInfoLine, groupLinesByMod, parseModInfoLine, parseModType, ModifierInfo, ParsedModifier, ENCHANT_LINE, SCOURGE_LINE, CRUCIBLE_LINE } from './advanced-mod-desc'
 import { calcPropPercentile, QUALITY_STATS } from './calc-q20'
 import { AppConfig } from '@/web/Config'
 // import { Host } from '@/web/background/IPC'
@@ -693,6 +693,7 @@ function parseModifiers (section: string[], item: ParsedItem) {
   const recognizedLine = section.find(line =>
     line.endsWith(ENCHANT_LINE) ||
     line.endsWith(SCOURGE_LINE) ||
+    line.endsWith(CRUCIBLE_LINE) ||
     isModInfoLine(line)
   )
 
@@ -703,6 +704,10 @@ function parseModifiers (section: string[], item: ParsedItem) {
   if (isModInfoLine(recognizedLine)) {
     for (const { modLine, statLines } of groupLinesByMod(section)) {
       const { modType, lines } = parseModType(statLines)
+
+      if (modType === ModifierType.Crucible) {
+        continue
+      }
       const modInfo = parseModInfoLine(modLine, modType)
       parseStatsFromMod(lines, item, { info: modInfo, stats: [] })
 

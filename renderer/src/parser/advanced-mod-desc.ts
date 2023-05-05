@@ -8,6 +8,7 @@ export const ENCHANT_LINE = ' (enchant)'
 const IMPLICIT_LINE = ' (implicit)'
 const CRAFTED_LINE = ' (crafted)'
 const FRACTURED_LINE = ' (fractured)'
+export const CRUCIBLE_LINE = ' (crucible)'
 
 export interface ParsedModifier {
   info: ModifierInfo
@@ -137,6 +138,9 @@ export function parseModType (lines: string[]): { modType: ModifierType, lines: 
   } else if (lines.some(line => line.endsWith(CRAFTED_LINE))) {
     modType = ModifierType.Crafted
     lines = removeLinesEnding(lines, CRAFTED_LINE)
+  } else if (lines.some(line => line.endsWith(CRUCIBLE_LINE))) {
+    modType = ModifierType.Crucible
+    lines = removeLinesEnding(lines, CRUCIBLE_LINE)
   } else {
     modType = ModifierType.Explicit
   }
