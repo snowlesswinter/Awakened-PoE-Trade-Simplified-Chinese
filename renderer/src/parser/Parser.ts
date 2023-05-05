@@ -67,6 +67,7 @@ const parsers: Array<ParserFn | { virtual: VirtualParserFn }> = [
   parseModifiers, // explicit
   { virtual: transformToLegacyModifiers },
   { virtual: parseFractured },
+  { virtual: parseCrucible },
   { virtual: parseBlightedMap },
   { virtual: pickCorrectVariant },
   { virtual: calcBasePercentile }
@@ -269,6 +270,13 @@ function parseBlightedMap (item: ParsedItem) {
 
 function parseFractured (item: ParserState) {
   if (item.newMods.some(mod => mod.info.type === ModifierType.Fractured)) {
+    item.isFractured = true
+  }
+}
+
+function parseCrucible (item: ParserState) {
+  // 新赛季内容，但是目前不解析
+  if (item.newMods.some(mod => mod.info.type === ModifierType.Crucible)) {
     item.isFractured = true
   }
 }

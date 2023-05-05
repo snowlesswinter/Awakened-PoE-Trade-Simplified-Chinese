@@ -120,5 +120,6 @@ export enum ModifierType {
   Enchant = 'enchant',
   Scourge = 'scourge',
   Veiled = 'veiled',
-  Fractured = 'fractured'
+  Fractured = 'fractured',
+  Crucible = 'crucible',
 }
