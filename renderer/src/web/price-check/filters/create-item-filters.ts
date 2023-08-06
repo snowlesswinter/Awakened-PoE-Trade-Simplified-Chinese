@@ -10,7 +10,6 @@ export const SPECIAL_SUPPORT_GEM = ['Empower Support', 'Enlighten Support', 'Enh
 interface CreateOptions {
   offline: boolean
   league: string
-  chaosPriceThreshold: number
   currency: string | undefined
   collapseListings: 'app' | 'api'
   activateStockFilter: boolean
@@ -30,7 +29,6 @@ export function createFilters (
       listed: undefined,
       currency: opts.currency,
       league: opts.league,
-      chaosPriceThreshold: opts.chaosPriceThreshold,
       collapseListings: opts.collapseListings
     }
   }

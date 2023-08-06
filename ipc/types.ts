@@ -7,7 +7,7 @@ export interface HostConfig {
   poesessid: string
   realm: string
   overlayKey: string
-  logLevel: string
+  logKeys: boolean
   windowTitle: string
   language: string
 }
