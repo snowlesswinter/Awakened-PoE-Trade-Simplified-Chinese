@@ -11,4 +11,8 @@ cd ../main
 yarn --frozen-lockfile
 yarn build
 yarn package
+cd ..
 
+
+需要手动校对的：异色鞋、无所遁形的“恶毒牢房” “恶毒结界”、 带 advanced 标签的词缀
+涂油需要用脚本跑一下，再出来一行
