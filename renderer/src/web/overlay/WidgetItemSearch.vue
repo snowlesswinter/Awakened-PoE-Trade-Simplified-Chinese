@@ -6,6 +6,7 @@
         class="flex gap-x-1 py-1 pr-1 bg-gray-800 rounded">
         <div v-for="item in starred" :key="item.name + item.discr"
           :class="$style.starredItem">
+          <button @click="findItemInTrade(item)" class="btn">
           <ItemQuickPrice
             :item-img="item.icon"
             :price="item.price"
@@ -14,6 +15,7 @@
           <div class="ml-1 truncate" style="max-width: 7rem;">{{ item.name }}</div>
           <div v-if="item.discr"
             class="ml-1 truncate" style="max-width: 7rem;">{{ t(item.discr) }}</div>
+          </button>
         </div>
       </transition-group>
       <ui-timeout v-if="!showSearch"
@@ -68,7 +70,7 @@
 <script lang="ts">
 import { ref } from 'vue'
 import { distance } from 'fastest-levenshtein'
-import { BaseType, ITEMS_ITERATOR, CLIENT_STRINGS as _$, ALTQ_GEM_NAMES } from '@/assets/data'
+import { BaseType, ITEM_BY_REF, ITEMS_ITERATOR, CLIENT_STRINGS as _$, ALTQ_GEM_NAMES, ITEM_BY_TRANSLATED } from '@/assets/data'
 import { AppConfig } from '@/web/Config'
 import { CurrencyValue } from '@/web/background/Prices'
 
@@ -78,6 +80,7 @@ interface SelectedItem {
   discr?: string
   chaos?: number
   price?: CurrencyValue
+  variant ?: string
 }
 
 function useSelectedItems () {
@@ -112,14 +115,15 @@ function findItems (opts: {
   jsonIncludes: string[]
   matchFn: (item: BaseType) => boolean
 }): BaseType[] | false {
+  const isCJK = (AppConfig().language === 'cmn-Hant' || AppConfig().language === 'zh_CN')
+  const minSearchLimit = isCJK ? 1 : 3
   const search = opts.search.trim()
   const lcSearch = search.toLowerCase().split(/\s+/).sort((a, b) => b.length - a.length)
-  if (search.length < 3) return false
-
+  if (search.length < minSearchLimit) return false
   const out = []
 
   const lcLongestWord = lcSearch[0]
-  const jsonSearch = (AppConfig().language !== 'cmn-Hant')
+  const jsonSearch = !isCJK
     ? lcLongestWord.slice(1) // in non-CJK first letter should be in first utf16 code unit
     : lcLongestWord
 
@@ -133,7 +137,7 @@ function findItems (opts: {
     if (
       opts.matchFn(match) &&
       lcSearch.every(part => lcName.includes(part)) &&
-      ((AppConfig().language === 'cmn-Hant') || lcName.split(/\s+/).some(part => part.startsWith(lcLongestWord)))
+      (isCJK || lcName.split(/\s+/).some(part => part.startsWith(lcLongestWord)))
     ) {
       out.push(match)
       if (out.length > MAX_RESULTS) return false
@@ -177,7 +181,6 @@ function fuzzyFindHeistGem (badStr: string) {
 import { shallowRef, computed, nextTick, inject } from 'vue'
 import { useI18nNs } from '@/web/i18n'
 import { ItemSearchWidget, WidgetManager } from './interfaces'
-import { ITEM_BY_TRANSLATED } from '@/assets/data'
 import { usePoeninja } from '@/web/background/Prices'
 import { Host } from '@/web/background/IPC'
 
@@ -237,7 +240,8 @@ function selectItem (item: BaseType, opts: { altQuality?: string, unique?: true,
     icon: item.icon,
     discr: opts.altQuality,
     chaos: price?.chaos,
-    price: (price != null) ? autoCurrency(price.chaos) : undefined
+    price: (price != null) ? autoCurrency(price.chaos) : undefined,
+    variant: (opts.altQuality) ? '' : ITEM_BY_REF('ITEM', item.unique!.base)![0].name
   })
   if (isAdded && opts.withTimeout) {
     showTimeout.value?.reset()
@@ -275,6 +279,55 @@ const showSearch = wm.active
 
 function makeInvisible () {
   props.config.wmFlags = ['invisible-on-blur']
+}
+
+function findItemInTrade (item: SelectedItem) {
+  if (AppConfig().realm !== 'pc-tencent') { return null }
+
+  const Quality = item.discr === 'Anomalous' || item.discr === 'Divergent' || item.discr === 'Phantasmal'
+
+  // if (!Quality) { return null }
+
+  let quality
+  if (item.discr === 'Anomalous') {
+    quality = '异常'
+  } else if (item.discr === 'Divergent') {
+    quality = '分歧'
+  } else if (item.discr === 'Phantasmal') {
+    quality = '魅影'
+  }
+
+  const Gem: string =
+      `物品类别: 技能宝石
+稀 有 度: 宝石
+${quality} ${item.name}
+--------
+
+等级: 16
+品质: +12% (augmented)
+替换品质`
+
+  const unique: string =
+      `物品类别: 装备
+稀 有 度: 传奇
+${item.name}
+${item.variant}
+--------`
+
+  const ClipBoardTxt = Quality ? Gem : unique
+
+  Host.selfDispatch({
+    name: 'MAIN->CLIENT::item-text',
+    payload: {
+      clipboard: ClipBoardTxt,
+      position: {
+        x: window.screenX,
+        y: window.screenY
+      },
+      focusOverlay: true,
+      target: 'price-check'
+    }
+  })
 }
 </script>
 

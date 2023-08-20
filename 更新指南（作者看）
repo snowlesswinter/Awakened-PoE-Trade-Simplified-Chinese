@@ -1,0 +1,14 @@
+（国服没开的时候）：从A大补丁里抓词缀文件用，从原本的国服文件里抓物品文件用
+（国服开了的时候）：从国服文件里抓词缀和物品文件用
+
+自己编译测试代码：
+cd ./renderer
+yarn --frozen-lockfile
+yarn make-index-files
+yarn lint
+yarn build
+cd ../main
+yarn --frozen-lockfile
+yarn build
+yarn package
+
