@@ -220,7 +220,7 @@ export default defineComponent({
     const showBrowser = inject<(url: string) => void>('builtin-browser')!
 
     function makeTradeLink () {
-      return (searchResult.value)
+      return (searchResult.value && (AppConfig().realm === 'pc-ggg'))
         ? `https://${getTradeEndpoint()}/trade/search/${props.filters.trade.league}/${searchResult.value.id}`
         : `https://${getTradeEndpoint()}/trade/search/${props.filters.trade.league}?q=${JSON.stringify(createTradeRequest(props.filters, props.stats, props.item))}`
     }
