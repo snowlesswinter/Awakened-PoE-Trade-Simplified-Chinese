@@ -70,7 +70,7 @@
 <script lang="ts">
 import { ref } from 'vue'
 import { distance } from 'fastest-levenshtein'
-import { BaseType, ITEM_BY_TRANSLATED, ITEM_BY_REF, CLIENT_STRINGS, ITEMS_ITERATOR as _$, ALTQ_GEM_NAMES, REPLICA_UNIQUE_NAMES } from '@/assets/data'
+import { BaseType, ITEM_BY_REF, ITEM_BY_TRANSLATED, CLIENT_STRINGS as _$, ALTQ_GEM_NAMES, REPLICA_UNIQUE_NAMES } from '@/assets/data'
 import { AppConfig } from '@/web/Config'
 import { CurrencyValue } from '@/web/background/Prices'
 
