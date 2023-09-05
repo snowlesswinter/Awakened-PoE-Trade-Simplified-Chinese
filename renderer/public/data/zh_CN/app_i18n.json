@@ -348,7 +348,7 @@
     "accurate_collapsed": "显示被折叠列表标记",
     "auto_search": "按住则自动搜索",
     "select_stock": "总是选择\"存量\"过滤",
-    "select_offline": "总是选择\"在线\"查询",
+    "select_offline": "默认选择\"在线及离线\"查询",
     "show_prediction": "显示价格预测"
   }
 }
