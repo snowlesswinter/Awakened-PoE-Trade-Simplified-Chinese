@@ -77,6 +77,7 @@ export async function initConfig () {
   }
 
   updateConfig(upgradeConfig(config))
+  pushHostConfig()
 }
 
 export function poeWebApi () {
