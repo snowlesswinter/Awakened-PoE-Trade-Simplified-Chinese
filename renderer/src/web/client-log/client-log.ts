@@ -123,6 +123,14 @@ export function handleLine (line: string) {
       // console.log(entry)
     }
   }
+
+  if (entry.сhannel === MessageChannel.SYSTEM) {
+    if ((match = entry.body.match(ENTER_AREA[(AppConfig().realm === 'pc-ggg' && CN) ? 'en' : AppConfig().language]))) {
+      if (match.groups!.area === 'Aspirants\' Plaza') {
+        console.log()
+      }
+    }
+  }
 }
 
 const TRADE_WHISPER = {
@@ -143,4 +151,11 @@ const TRADE_BULK_WHISPER = {
   'ru': /^Здравствуйте, хочу купить у вас (?<item>.+) за (?<price>.+) в лиге (?<league>.+)\.(?<message>.+)?$/,
   'cmn-Hant': /^你好，我想用 (?<price>.+) 購買 (?<item>.+) in (?<league>.+)\.(?<message>.+)?$/,
   'zh_CN': /^你好，我希望购买你的(?<item>.+)用于我的(?<price>.+)，在(?<league>.+)(?<message>.+)?$/
+}
+
+const ENTER_AREA = {
+  'en': /^(?<A_patch>.+?)You have entered (?<area>.+)\.$/,
+  'ru': /^Здравствуйте, хочу купить у вас (?<item>.+) за (?<price>.+) в лиге (?<league>.+)\.(?<message>.+)?$/,
+  'cmn-Hant': /^你好，我想用 (?<price>.+) 購買 (?<item>.+) in (?<league>.+)\.(?<message>.+)?$/,
+  'zh_CN': /^(?<A_patch>.+?)你已进入： (?<area>.+)。$/
 }

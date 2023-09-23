@@ -58,9 +58,7 @@ if (props.config.wmFlags[0] === 'uninitialized') {
     x: (Math.random() * (60 - 40) + 40),
     y: (Math.random() * (15 - 5) + 5)
   }
-  props.config.images = [{
-    id: 1, url: 'syndicate.jpg'
-  }]
+  props.config.images = []
   nextTick(() => {
     wm.show(props.config.wmId)
   })

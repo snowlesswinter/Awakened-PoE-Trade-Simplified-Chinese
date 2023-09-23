@@ -42,7 +42,7 @@
   "app": {
     "leagues_loading": "正在载入赛季\u2026",
     "leagues_failed": "赛季载入失败",
-    "leagues_failed_help": "请确认服务器是否维护中。同时点击\"浏览器\"按钮前往人机验证。",
+    "leagues_failed_help": "请确认服务器是否维护中。同时点击\"浏览器\"按钮前往人机验证。\n如果是国服玩家，请确认poesessid填写无误\n也可能是过期了",
     "leagues_failed_help_alt": "物品价格搜索,请按错误信息指示操作",
     "thanks_3rd_party": "此工具基于{0}及{1},请支持他们",
     "toggle_browser_hint": "请按{0}在浏览器和游戏之间切换",
@@ -305,7 +305,7 @@
     "title": "设置 - Awakened PoE Trade Simplified Chinese By 红尘渡者",
     "language": "语言",
     "private_league": "或私人赛季",
-    "account_name": "帐号",
+    "account_name": "帐号(仅仅用来检测查价结果卖家是否为自己)",
     "last_char_name": "最近角色名称",
     "chat_cmd_add": "增加命令",
     "chat_cmd_send": "按回车(Enter)",
