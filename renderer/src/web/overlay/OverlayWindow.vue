@@ -51,7 +51,7 @@ import { usePoeninja } from '@/web/background/Prices'
 import { useLeagues } from '@/web/background/Leagues'
 import { handleLine } from '@/web/client-log/client-log'
 
-import { imgArray } from '@/web/background/Labyrinrh'
+import { imgArray, updateImage } from '@/web/background/Labyrinrh'
 type WMID = Widget['wmId']
 
 export default defineComponent({
@@ -108,7 +108,7 @@ export default defineComponent({
       }
     })
 
-    Host.onEvent('MAIN->OVERLAY::focus-change', (state) => {
+    Host.onEvent('MAIN->OVERLAY::focus-change', async (state) => {
       active.value = state.overlay
       gameFocused.value = state.game
 
@@ -118,47 +118,48 @@ export default defineComponent({
             hide(w.wmId)
           }
         }
-
-        let NoLabImg = true
-        for (const widget of AppConfig().widgets) {
-          if (widget.wmTitle === '今日迷宫路线图') {
-            (widget as ImageStripWidget).images = [
-              { id: 1, url: imgArray[0] },
-              { id: 2, url: imgArray[1] },
-              { id: 3, url: imgArray[2] },
-              { id: 4, url: imgArray[3] }
-            ]
-            NoLabImg = false
-          }
-        }
-
-        if (NoLabImg) {
-          AppConfig().widgets.push({
-            wmId: Math.max(0, ...AppConfig().widgets.map(_ => _.wmId)) + 1,
-            wmType: 'image-strip',
-            wmTitle: '今日迷宫路线图',
-            wmWants: 'hide',
-            wmZorder: null,
-            wmFlags: ['invisible-on-blur'],
-            anchor: {
-              pos: 'tc',
-              x: (Math.random() * (60 - 40) + 40),
-              y: (Math.random() * (15 - 5) + 5)
-            },
-            images: [
-              { id: 1, url: imgArray[0] },
-              { id: 2, url: imgArray[1] },
-              { id: 3, url: imgArray[2] },
-              { id: 4, url: imgArray[3] }
-            ]
-          } as Widget)
-        }
-
-        Host.logs.value += imgArray[0] + '\n'
+        await updateImage()
       } else {
         for (const w of widgets.value) {
           if (w.wmFlags.includes('hide-on-focus')) {
             hide(w.wmId)
+          }
+        }
+        if (imgArray) {
+          let NoLabImg = true
+
+          for (const widget of AppConfig().widgets) {
+            if (widget.wmTitle === '今日迷宫路线图') {
+              (widget as ImageStripWidget).images = [
+                { id: 1, url: imgArray[0] },
+                { id: 2, url: imgArray[1] },
+                { id: 3, url: imgArray[2] },
+                { id: 4, url: imgArray[3] }
+              ]
+              NoLabImg = false
+            }
+          }
+
+          if (NoLabImg) {
+            AppConfig().widgets.push({
+              wmId: Math.max(0, ...AppConfig().widgets.map(_ => _.wmId)) + 1,
+              wmType: 'image-strip',
+              wmTitle: '今日迷宫路线图',
+              wmWants: 'hide',
+              wmZorder: null,
+              wmFlags: ['invisible-on-blur'],
+              anchor: {
+                pos: 'tc',
+                x: (Math.random() * (60 - 40) + 40),
+                y: (Math.random() * (15 - 5) + 5)
+              },
+              images: [
+                { id: 1, url: imgArray[0] },
+                { id: 2, url: imgArray[1] },
+                { id: 3, url: imgArray[2] },
+                { id: 4, url: imgArray[3] }
+              ]
+            } as Widget)
           }
         }
       }
