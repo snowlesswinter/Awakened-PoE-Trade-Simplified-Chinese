@@ -102,9 +102,8 @@ export class HeistGemFinder {
       elapsed += timeIt(() => {
         tessApi.Recognize()
       })
-      const text = tessApi.GetUTF8Text().replace(/[()辅（）]/g,'').trim()
+      const text = tessApi.GetUTF8Text().replace(/\([a-zA-Z]+?\)/g, '').trim()
       console.log(text + '\n')
-      console.log(`1123455`)
       const confidence = tessApi.MeanTextConf()
       if (text.length > 0 && confidence > 30) {
         recognizedLines.push({ text, confidence })
@@ -121,7 +120,6 @@ export class HeistGemFinder {
       linesMax: Math.max(...linesWeight),
       recognized: recognizedLines
     }
-    console.log(results + '\n')
     return results
   }
 }
