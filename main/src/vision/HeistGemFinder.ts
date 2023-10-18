@@ -102,7 +102,7 @@ export class HeistGemFinder {
       elapsed += timeIt(() => {
         tessApi.Recognize()
       })
-      const text = tessApi.GetUTF8Text().replace(/\([a-zA-Z]+?\)/g, '').trim()
+      const text = tessApi.GetUTF8Text().replace(/\([a-zA-Z]+?\)/g, '').replace(/\s+/g, ' ').trim()
       console.log(text + '\n')
       const confidence = tessApi.MeanTextConf()
       if (text.length > 0 && confidence > 30) {
