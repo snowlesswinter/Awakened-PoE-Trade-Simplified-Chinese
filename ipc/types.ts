@@ -147,6 +147,7 @@ type IpcItemText =
   Event<'MAIN->CLIENT::item-text', {
     target: string
     clipboard: string
+    item?: unknown
     position: { x: number, y: number }
     focusOverlay: boolean
   }>
