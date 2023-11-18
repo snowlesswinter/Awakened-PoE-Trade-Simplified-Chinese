@@ -136,7 +136,7 @@ function findItems (opts: {
 }
 
 function fuzzyFindHeistGem (badStr: string) {
-  badStr = badStr.toLowerCase()
+  badStr = badStr.toLowerCase().replace(/[()（）【】 ]/g, '')
 
   const qualities = [
     ['Anomalous', _$.QUALITY_ANOMALOUS.toString().slice(2, -2)],
@@ -148,7 +148,7 @@ function fuzzyFindHeistGem (badStr: string) {
   let minDist = Infinity
   for (const name of ALTQ_GEM_NAMES()) {
     for (const [altQuality, reStr] of qualities) {
-      const exactStr = reStr.replace('(.*)', name).toLowerCase()
+      const exactStr = reStr.replace('(.*)', name).toLowerCase().replace(/[()（）【】 ]/g, '')
       if (Math.abs(exactStr.length - badStr.length) > 5) {
         continue
       }

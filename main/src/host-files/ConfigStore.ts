@@ -1,5 +1,5 @@
 import type { ServerEvents } from '../server'
-import { app } from 'electron'
+import { app,dialog } from 'electron'
 import fs from 'fs/promises'
 import path from 'path'
 
@@ -36,6 +36,13 @@ export class ConfigStore {
       await fs.mkdir(path.dirname(this.cfgPath), { recursive: true })
       await fs.writeFile(this.cfgPath, contents)
     } catch {
+      dialog.showErrorBox(
+          '未能写入配置文件',
+          // ----------------------
+          '未能写入配置文件\n' +
+          '请尝试使用管理员权限运行本程序并且保存配置文件\n' +
+          '出现本弹窗后本程序将自动退出'
+      )
       app.exit(1)
     }
   }
