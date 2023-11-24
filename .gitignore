@@ -26,3 +26,5 @@ yarn-error.log*
 # vitepress
 docs/.vitepress/dist
 docs/.vitepress/cache
+/price.json
+/price_ninja.json
