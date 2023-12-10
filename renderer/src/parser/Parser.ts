@@ -37,7 +37,6 @@ const parsers: Array<ParserFn | { virtual: VirtualParserFn }> = [
   parseSynthesised,
   parseCategoryByHelpText,
   { virtual: normalizeName },
-  { virtual: parseGemAltQuality },
   parseVaalGemName,
   { virtual: findInDatabase },
   // -----------
@@ -68,7 +67,6 @@ const parsers: Array<ParserFn | { virtual: VirtualParserFn }> = [
   parseModifiers, // explicit
   { virtual: transformToLegacyModifiers },
   { virtual: parseFractured },
-  { virtual: parseCrucible },
   { virtual: parseBlightedMap },
   { virtual: pickCorrectVariant },
   { virtual: calcBasePercentile }
@@ -282,13 +280,6 @@ function parseFractured (item: ParserState) {
   }
 }
 
-function parseCrucible (item: ParserState) {
-  // 新赛季内容，但是目前不解析
-  if (item.newMods.some(mod => mod.info.type === ModifierType.Crucible)) {
-    item.isFractured = true
-  }
-}
-
 function pickCorrectVariant (item: ParserState) {
   if (!item.info.disc) return
 
@@ -463,15 +454,8 @@ function parseVaalGemName (section: string[], item: ParserState) {
   // TODO blocked by https://www.pathofexile.com/forum/view-thread/3231236
   if (section.length === 1) {
     let gemName: string | undefined
-    if ((gemName = _$.QUALITY_ANOMALOUS.exec(section[0])?.[1])) {
-      item.gemAltQuality = 'Anomalous'
-    } else if ((gemName = _$.QUALITY_DIVERGENT.exec(section[0])?.[1])) {
-      item.gemAltQuality = 'Divergent'
-    } else if ((gemName = _$.QUALITY_PHANTASMAL.exec(section[0])?.[1])) {
-      item.gemAltQuality = 'Phantasmal'
-    } else if (ITEM_BY_TRANSLATED('GEM', section[0].replace(/\([\w\s']+?\)/g, ''))) {
-      gemName = section[0].replace(/\([\w\s']+?\)/g, '')
-      item.gemAltQuality = 'Superior'
+    if (ITEM_BY_TRANSLATED('GEM', section[0])) {
+      gemName = section[0]
     }
     if (gemName) {
       if (AppConfig().realm === 'pc-tencent') {
@@ -498,30 +482,6 @@ function parseGem (section: string[], item: ParsedItem) {
     return 'SECTION_PARSED'
   }
   return 'SECTION_SKIPPED'
-}
-
-function parseGemAltQuality (item: ParserState) {
-  if (item.category !== ItemCategory.Gem) return
-
-  let gemName: string | undefined
-  if ((gemName = (AppConfig().realm === 'pc-ggg'
-    ? _$REF
-    : _$).QUALITY_ANOMALOUS.exec(item.name)?.[1])) {
-    item.gemAltQuality = 'Anomalous'
-  } else if ((gemName = (AppConfig().realm === 'pc-ggg'
-    ? _$REF
-    : _$).QUALITY_DIVERGENT.exec(item.name)?.[1])) {
-    item.gemAltQuality = 'Divergent'
-  } else if ((gemName = (AppConfig().realm === 'pc-ggg'
-    ? _$REF
-    : _$).QUALITY_PHANTASMAL.exec(item.name)?.[1])) {
-    item.gemAltQuality = 'Phantasmal'
-  } else {
-    item.gemAltQuality = 'Superior'
-  }
-  if (gemName) {
-    item.name = gemName
-  }
 }
 
 function parseStackSize (section: string[], item: ParsedItem) {
@@ -599,7 +559,7 @@ function parseArmour (section: string[], item: ParsedItem) {
     }
     if (line.startsWith(_$.BLOCK_CHANCE)) {
       item.armourBLOCK = parseInt(line.slice(_$.BLOCK_CHANCE.length), 10)
-      isParsed = 'SECTION_PARSED'
+      isParsed = 'SECTION_PARSED'; continue
     }
   }
 
@@ -636,7 +596,7 @@ function parseWeapon (section: string[], item: ParsedItem) {
           .map(element => getRollOrMinmaxAvg(element.split('-').map(str => parseInt(str, 10))))
           .reduce((sum, x) => sum + x, 0)
 
-      isParsed = 'SECTION_PARSED'
+      isParsed = 'SECTION_PARSED'; continue
     }
   }
 
@@ -949,6 +909,7 @@ function markupConditionParser (text: string) {
   // ignores state set by <<set:__>>
   // always evaluates first condition to true <if:__>{...}
   // full markup: https://gist.github.com/SnosMe/151549b532df8ea08025a76ae2920ca4
+
   text = text.replace(/<<set:.+?>>/g, '')
   text = text.replace(/<(if:.+?|elif:.+?|else)>{(.+?)}/g, (_, type: string, body: string) => {
     return type.startsWith('if:')
