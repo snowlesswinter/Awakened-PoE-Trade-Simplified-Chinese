@@ -3,6 +3,8 @@ import { createGlobalState } from '@vueuse/core'
 import { Host } from '@/web/background/IPC'
 import { useLeagues } from './Leagues'
 import { BaseType, CLIENT_STRINGS as _$, ITEM_BY_REF } from '@/assets/data'
+import pako from 'pako'
+import { Buffer } from 'buffer'
 
 interface NinjaDenseInfo {
   chaos: number
@@ -67,11 +69,14 @@ export const usePoeninja = createGlobalState(() => {
       } else if (league.realm === 'pc-tencent') {
         let jsonurl: string
         switch (league.id) {
+          case '永久':
+            jsonurl = 'pub-feb51ef2e03741399e6a3d2d09a07601.r2.dev/price1.txt'
+            break
           case 'S23赛季':
-            jsonurl = 'pub-feb51ef2e03741399e6a3d2d09a07601.r2.dev/price.json'
+            jsonurl = 'pub-feb51ef2e03741399e6a3d2d09a07601.r2.dev/price2.txt'
             break
           case 'S24季前赛（昔时回响）':
-            jsonurl = 'pub-feb51ef2e03741399e6a3d2d09a07601.r2.dev/price3.json'
+            jsonurl = 'pub-feb51ef2e03741399e6a3d2d09a07601.r2.dev/price3.txt'
             break
           default:
             return
@@ -79,8 +84,8 @@ export const usePoeninja = createGlobalState(() => {
         const response = await Host.proxy(jsonurl, {
           signal: downloadController.signal
         })
-        const jsonBlob = await response.text()
-
+        const compressedBuffer = Buffer.from(await response.text(), 'base64')
+        const jsonBlob = pako.ungzip(compressedBuffer, { to: 'string' })
         PRICES_DB_CN = splitJsonBlob(jsonBlob) as PriceDatabaseCN
         divine = findPriceByQuery({ ns: 'ITEM', name: 'Divine Orb', variant: undefined })
       }
