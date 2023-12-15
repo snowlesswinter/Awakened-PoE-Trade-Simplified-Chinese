@@ -45,7 +45,7 @@ export default {
   FLASK_CHARGES: /^目前有 \d+ 充能次数$/,
   METAMORPH_HELP: '在丹恩的试验室里同其它四种样本调和。',
   BEAST_HELP: '右键点击后加入你的猎魔笔记。',
-  VOIDSTONE_HELP: '将此放置于异界图鉴中，来增加地图等级和解锁隐藏地图。',
+  VOIDSTONE_HELP: '把它插入你的异界图鉴可以提高所有地图的位阶。',
   METAMORPH_BRAIN: /^.*的中枢$/,
   METAMORPH_EYE: /^.*的视界$/,
   METAMORPH_LUNG: /^.*的呼吸$/,
