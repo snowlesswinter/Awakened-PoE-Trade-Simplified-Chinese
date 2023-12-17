@@ -8,6 +8,7 @@ import { STAT_BY_REF } from '@/assets/data'
 import { RateLimiter } from './RateLimiter'
 import { ModifierType } from '@/parser/modifiers'
 import { Cache } from './Cache'
+import { AppConfig } from '@/web/Config'
 
 export const CATEGORY_TO_TRADE_ID = new Map([
   [ItemCategory.Map, 'map'],
@@ -184,6 +185,7 @@ interface TradeRequest { /* eslint-disable camelcase */
           collapse?: FilterBoolean
           indexed?: { option?: string }
           price?: FilterRange | { option?: string }
+          sale_type?: { option?: string }
         }
       }
     }
@@ -254,7 +256,7 @@ export function createTradeRequest (filters: ItemFilters, stats: StatFilter[], i
       stats: [
         { type: 'and', filters: [] }
       ],
-      filters: {}
+      filters: AppConfig().realm === 'pc-tencent' ? { trade_filters: { filters: { sale_type: { option: 'any' } } } } : {}
     },
     sort: {
       price: 'asc'
