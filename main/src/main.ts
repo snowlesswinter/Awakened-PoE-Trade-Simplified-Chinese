@@ -49,8 +49,8 @@ app.on('ready', async () => {
         httpProxy.updateCookies(cfg.poesessid, cfg.realm)
         overlay.updateOpts(cfg.overlayKey, cfg.windowTitle)
         shortcuts.updateActions(cfg.shortcuts, cfg.stashScroll, cfg.logKeys, cfg.restoreClipboard, cfg.language)
-        gameLogWatcher.restart(cfg.clientLog)
-        gameConfig.readConfig(cfg.gameConfig)
+        gameLogWatcher.restart(cfg.clientLog ?? '')
+        gameConfig.readConfig(cfg.gameConfig ?? '')
         appUpdater.checkAtStartup()
         tray.overlayKey = cfg.overlayKey
       })
