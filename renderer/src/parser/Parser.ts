@@ -15,6 +15,7 @@ import { magicBasetype } from './magic-name'
 import { isModInfoLine, groupLinesByMod, parseModInfoLine, parseModType, ModifierInfo, ParsedModifier, ENCHANT_LINE, SCOURGE_LINE, CRUCIBLE_LINE } from './advanced-mod-desc'
 import { calcPropPercentile, QUALITY_STATS } from './calc-q20'
 import { AppConfig } from '@/web/Config'
+import { Host } from '@/web/background/IPC'
 // import { Host } from '@/web/background/IPC'
 
 type SectionParseResult =
@@ -232,7 +233,9 @@ function findInDatabase (item: ParserState) {
       info = info.filter(info => info.unique!.base === item.baseType)
     } else {
       const baseInfo: BaseType[] | undefined = ITEM_BY_TRANSLATED('ITEM', item.baseType ?? item.name)
-      info = info.filter(info => info.unique!.base === baseInfo![0].refName)
+      if (info[0].unique.base !== 'Silk Gloves' || AppConfig().realm !== 'pc-tencent') {
+        info = info.filter(info => info.unique!.base === baseInfo![0].refName)
+      }
     }
   }
   item.infoVariants = info
