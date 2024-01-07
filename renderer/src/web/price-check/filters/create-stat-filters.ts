@@ -5,6 +5,7 @@ import { FilterTag, ItemHasEmptyModifier, StatFilter } from './interfaces'
 import { filterPseudo } from './pseudo'
 import { applyRules as applyAtzoatlRules } from './pseudo/atzoatl-rules'
 import { applyRules as applyMirroredTabletRules } from './pseudo/reflection-rules'
+import { applyRules as applyT17MapRules } from './pseudo/t17-map-rules'
 import { filterItemProp, filterBasePercentile } from './pseudo/item-property'
 import { decodeOils, applyAnointmentRules } from './pseudo/anointments'
 import { StatBetter, CLIENT_STRINGS, CLIENT_STRINGS_REF } from '@/assets/data'
@@ -50,6 +51,10 @@ export function createExactStatFilters (
     keepByType.push(ModifierType.Explicit)
   }
 
+  if (item.mapTier === 17) {
+    keepByType.push(ModifierType.Explicit)
+  }
+
   if (item.category === ItemCategory.Flask) {
     keepByType.push(ModifierType.Crafted)
   }
@@ -75,7 +80,10 @@ export function createExactStatFilters (
     applyMirroredTabletRules(ctx.filters)
     return ctx.filters
   }
-
+  if (item.mapTier === 17) {
+    applyT17MapRules(ctx.filters)
+    return ctx.filters
+  }
   for (const filter of ctx.filters) {
     filter.hidden = undefined
 
@@ -179,7 +187,7 @@ export function calculatedStatToFilter (
         ? FilterTag.Enchant
         : FilterTag.Variant,
       oils: decodeOils(calc),
-      sources: sources,
+      sources,
       option: {
         value: sources[0].contributes!.value
       },
@@ -199,7 +207,7 @@ export function calculatedStatToFilter (
     text: translation.string,
     tag: (type as unknown) as FilterTag,
     oils: decodeOils(calc),
-    sources: sources,
+    sources,
     roll: undefined,
     disabled: true
   }
@@ -294,7 +302,7 @@ export function calculatedStatToFilter (
       bounds: (item.rarity === ItemRarity.Unique && roll.min !== roll.max && calc.stat.better !== StatBetter.NotComparable)
         ? filterBounds
         : undefined,
-      dp: dp,
+      dp,
       isNegated: false,
       tradeInvert: calc.stat.trade.inverted
     }

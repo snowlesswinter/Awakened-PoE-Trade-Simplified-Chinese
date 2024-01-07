@@ -2,8 +2,9 @@ import type { ItemFilters } from './interfaces'
 import { ParsedItem, ItemCategory, ItemRarity } from '@/parser'
 import { tradeTag } from '../trade/common'
 import { ModifierType } from '@/parser/modifiers'
-import { BaseType, ITEM_BY_REF } from '@/assets/data'
+import { BaseType, ITEM_BY_REF, ITEM_BY_TRANSLATED } from '@/assets/data'
 import { CATEGORY_TO_TRADE_ID } from '../trade/pathofexile-trade'
+import { AppConfig } from '@/web/Config'
 
 export const SPECIAL_SUPPORT_GEM = ['Empower Support', 'Enlighten Support', 'Enhance Support']
 
@@ -114,6 +115,10 @@ export function createFilters (
       filters.mapBlighted = { value: item.mapBlighted }
     }
 
+    if (item.mapReward) {
+      filters.mapReward = AppConfig().realm === 'pc-ggg' ? ITEM_BY_TRANSLATED('UNIQUE', item.mapReward)![0].refName : ITEM_BY_TRANSLATED('UNIQUE', item.mapReward)![0].name
+    }
+
     filters.mapTier = {
       value: item.mapTier!,
       disabled: false
@@ -172,7 +177,7 @@ export function createFilters (
       }
       filters.searchRelaxed = {
         category: item.category,
-        disabled: disabled
+        disabled
       }
     }
   }

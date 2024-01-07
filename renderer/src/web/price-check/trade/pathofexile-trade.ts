@@ -366,6 +366,10 @@ export function createTradeRequest (filters: ItemFilters, stats: StatFilter[], i
     propSet(query.filters, 'map_filters.filters.map_tier.max', filters.mapTier.value)
   }
 
+  if (filters.mapReward) {
+    propSet(query.filters, 'map_filters.filters.map_completion_reward.option', filters.mapReward)
+  }
+
   if (filters.mapBlighted) {
     if (filters.mapBlighted.value === 'Blighted') {
       propSet(query.filters, 'map_filters.filters.map_blighted.option', String(true))
@@ -481,6 +485,17 @@ export function createTradeRequest (filters: ItemFilters, stats: StatFilter[], i
         propSet(query.filters, 'weapon_filters.filters.aps.max', typeof input.max === 'number' ? input.max : undefined)
         break
     }
+  }
+
+  if (item.mapTier === 17 &&
+    !stats.some(s => s.statRef === 'Players who Die in area are sent to the Void')) {
+    const reducedEffectId = STAT_BY_REF('Players who Die in area are sent to the Void')!.trade.ids[ModifierType.Explicit][0]
+    query.stats.push({
+      type: 'not',
+      filters: [
+        { id: reducedEffectId }
+      ]
+    })
   }
 
   stats = stats.filter(stat => !INTERNAL_TRADE_IDS.includes(stat.tradeId[0] as any))

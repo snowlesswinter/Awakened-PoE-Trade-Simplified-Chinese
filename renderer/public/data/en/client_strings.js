@@ -31,6 +31,7 @@ export default {
   UNIDENTIFIED: 'Unidentified',
   ITEM_SUPERIOR: /^Superior (.*)$/,
   MAP_BLIGHTED: /^Blighted (.*)$/,
+  MAP_REWARD: 'Reward: Foil ',
   MAP_BLIGHT_RAVAGED: /^Blight-ravaged (.*)$/,
   INFLUENCE_SHAPER: 'Shaper Item',
   INFLUENCE_ELDER: 'Elder Item',

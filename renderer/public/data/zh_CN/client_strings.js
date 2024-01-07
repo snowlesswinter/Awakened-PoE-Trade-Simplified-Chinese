@@ -32,6 +32,7 @@ export default {
   ITEM_SUPERIOR: /^精良的 (.*)$/,
   MAP_BLIGHTED: /^菌潮 (.*)$/,
   MAP_BLIGHT_RAVAGED: /^菌潮灭绝 (.*)$/,
+  MAP_REWARD: '任务奖励: 烫金 ',
   INFLUENCE_SHAPER: '塑界之器',
   INFLUENCE_ELDER: '裂界之器',
   INFLUENCE_CRUSADER: '圣战者物品',
