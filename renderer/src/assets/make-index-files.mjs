@@ -61,19 +61,28 @@ for (const lang of LANGUAGES) {
 
 for (const lang of LANGUAGES) {
   /** @type{Array<{ hashName: number, hashRefName: number, start: number }>} */
-  let lineStarts
+  let lineStarts,lineStarts2
   {
     const ndjson = fs.readFileSync(`./public/data/${lang}/items.ndjson`, { encoding: 'utf-8' })
     let start = 0
     /** @type{Map<string, typeof lineStarts[number]>} */
     const startsByName = new Map()
+    const startsByRef = new Map()
     while (start !== ndjson.length) {
       const end = ndjson.indexOf('\n', start)
       /** @type {import('./data/interfaces').BaseType} */
       const item = JSON.parse(ndjson.slice(start, end))
-      const key = `${item.namespace}::${item.refName}`
+      const key = `${item.namespace}::${item.name}`
+      const key2 = `${item.namespace}::${item.refName}`
       if (!startsByName.has(key)) {
         startsByName.set(key, {
+          hashName: Number(fnv1a(`${item.namespace}::${item.name}`, { size: 32 })),
+          hashRefName: Number(fnv1a(`${item.namespace}::${item.refName}`, { size: 32 })),
+          start: start
+        })
+      }
+      if (!startsByRef.has(key2)) {
+        startsByRef.set(key2, {
           hashName: Number(fnv1a(`${item.namespace}::${item.name}`, { size: 32 })),
           hashRefName: Number(fnv1a(`${item.namespace}::${item.refName}`, { size: 32 })),
           start: start
@@ -82,6 +91,7 @@ for (const lang of LANGUAGES) {
       start = (end + 1)
     }
     lineStarts = Array.from(startsByName.values())
+    lineStarts2 = Array.from(startsByRef.values())
   }
 
   {
@@ -98,11 +108,11 @@ for (const lang of LANGUAGES) {
   }
 
   {
-    const indexData = new Uint32Array(lineStarts.length * 2)
-    lineStarts.sort((a, b) => a.hashRefName - b.hashRefName)
-    for (let i = 0; i < lineStarts.length; i += 1) {
-      indexData[i * 2 + 0] = lineStarts[i].hashRefName
-      indexData[i * 2 + 1] = lineStarts[i].start
+    const indexData = new Uint32Array(lineStarts2.length * 2)
+    lineStarts2.sort((a, b) => a.hashRefName - b.hashRefName)
+    for (let i = 0; i < lineStarts2.length; i += 1) {
+      indexData[i * 2 + 0] = lineStarts2[i].hashRefName
+      indexData[i * 2 + 1] = lineStarts2[i].start
     }
     fs.writeFileSync(
       path.join('./public/data', lang, 'items-ref.index.bin'),
