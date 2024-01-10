@@ -254,8 +254,8 @@ function findInDatabase (item: ParserState) {
 function parseMap (section: string[], item: ParsedItem) {
   if (section[0].startsWith(_$.MAP_TIER)) {
     item.mapTier = Number(section[0].slice(_$.MAP_TIER.length))
-    if (section[1].startsWith(_$.MAP_REWARD)) {
-      item.mapReward = section[1].slice(_$.MAP_REWARD.length)
+    if (section[1] && section[1]!.startsWith(_$.MAP_REWARD)) {
+      item.mapReward = section[1]!.slice(_$.MAP_REWARD.length)
     }
     return 'SECTION_PARSED'
   }
