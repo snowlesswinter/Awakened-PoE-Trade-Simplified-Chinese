@@ -27,9 +27,12 @@ if (!process.env.VITE_DEV_SERVER_URL) {
       case '.js': res.setHeader('content-type', 'text/javascript'); break;
       case '.json': res.setHeader('content-type', 'application/json'); break;
     }
-
-    fs.createReadStream(path.join(__dirname, filePath))
-      .pipe(res)
+    try {
+      fs.createReadStream(path.join(__dirname, filePath))
+          .pipe(res)
+    } catch (e) {
+      throw e
+    }
   })
 }
 

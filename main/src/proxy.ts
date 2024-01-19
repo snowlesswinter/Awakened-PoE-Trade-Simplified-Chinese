@@ -12,7 +12,7 @@ export const PROXY_HOSTS = [
   { host: 'poe.game.qq.com', official: true },
   { host: 'www.poelab.com', official: false },
   { host: 'pub-feb51ef2e03741399e6a3d2d09a07601.r2.dev', official: false },
-  { host: 'www.gitee.com', official: false }
+  { host: 'gitee.com', official: false }
 ]
 
 export class HttpProxy {
