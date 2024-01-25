@@ -46,8 +46,7 @@ export class HttpProxy {
             ...req.headers,
             host: host,
             cookie: cookie,
-            'user-agent': app.userAgentFallback,
-            'Sec-Fetch-Mode': 'no-cors'
+            'user-agent': app.userAgentFallback
           }
         }, (proxyRes) => {
           res.writeHead(proxyRes.statusCode!, proxyRes.statusMessage!, proxyRes.rawHeaders)
