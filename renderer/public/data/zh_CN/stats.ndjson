@@ -2582,11 +2582,11 @@
 {"ref":"+40% to Maximum Effect of Shock","better":1,"matchers":[{"string":"最大感电效果+40%"}],"trade":{"ids":{"explicit":["explicit.stat_4007740198"]}}}
 {"ref":"1 Added Passive Skill is Adrenaline","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【肾上腺素】"}],"trade":{"ids":{"explicit":["explicit.stat_4022743870"],"fractured":["fractured.stat_4022743870"]}}}
 {"ref":"1 Added Passive Skill is Advance Guard","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【先遣卫士】"}],"trade":{"ids":{"explicit":["explicit.stat_1625939562"],"fractured":["fractured.stat_1625939562"]}}}
-{"ref":"1 Added Passive Skill is Aerialist","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【高空钢丝】"}],"trade":{"ids":{"explicit":["explicit.stat_3848677307"]}}}
+{"ref":"1 Added Passive Skill is Aerialist","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【高空钢丝】"}],"trade":{"ids":{"explicit":["explicit.stat_3848677307"],"fractured":["fractured.stat_3848677307"]}}}
 {"ref":"1 Added Passive Skill is Aerodynamics","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【空气力学】"}],"trade":{"ids":{"explicit":["explicit.stat_4120556534"],"fractured":["fractured.stat_4120556534"]}}}
 {"ref":"1 Added Passive Skill is Agent of Destruction","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【毁灭使徒】"}],"trade":{"ids":{"explicit":["explicit.stat_3122491961"],"fractured":["fractured.stat_3122491961"]}}}
 {"ref":"1 Added Passive Skill is Aggressive Defence","better":1,"matchers":[{"string":"其中 1 个增加的天赋为以攻为守"}],"trade":{"ids":{"explicit":["explicit.stat_4154008618"],"fractured":["fractured.stat_4154008618"]}}}
-{"ref":"1 Added Passive Skill is Alchemist","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【炼金术士】"}],"trade":{"ids":{"explicit":["explicit.stat_2912949210"]}}}
+{"ref":"1 Added Passive Skill is Alchemist","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【炼金术士】"}],"trade":{"ids":{"explicit":["explicit.stat_2912949210"],"fractured":["fractured.stat_2912949210"]}}}
 {"ref":"1 Added Passive Skill is Ancestral Echo","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【先祖回音】"}],"trade":{"ids":{"explicit":["explicit.stat_957679205"],"fractured":["fractured.stat_957679205"]}}}
 {"ref":"1 Added Passive Skill is Ancestral Guidance","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【先祖指引】"}],"trade":{"ids":{"explicit":["explicit.stat_2387747995"],"fractured":["fractured.stat_2387747995"]}}}
 {"ref":"1 Added Passive Skill is Ancestral Inspiration","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【先祖教化】"}],"trade":{"ids":{"explicit":["explicit.stat_77045106"],"fractured":["fractured.stat_77045106"]}}}
@@ -2613,7 +2613,7 @@
 {"ref":"1 Added Passive Skill is Blood Artist","better":1,"matchers":[{"string":"其中 1 个增加的天赋为赤血造诣"}],"trade":{"ids":{"explicit":["explicit.stat_2284771334"]}}}
 {"ref":"1 Added Passive Skill is Bloodscent","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【鲜血之腥】"}],"trade":{"ids":{"explicit":["explicit.stat_3967765261"],"fractured":["fractured.stat_3967765261"]}}}
 {"ref":"1 Added Passive Skill is Blowback","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【还击】"}],"trade":{"ids":{"explicit":["explicit.stat_1612414696"],"fractured":["fractured.stat_1612414696"]}}}
-{"ref":"1 Added Passive Skill is Bodyguards","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【保镖】"}],"trade":{"ids":{"explicit":["explicit.stat_791125124"]}}}
+{"ref":"1 Added Passive Skill is Bodyguards","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【保镖】"}],"trade":{"ids":{"explicit":["explicit.stat_791125124"],"fractured":["fractured.stat_791125124"]}}}
 {"ref":"1 Added Passive Skill is Born of Chaos","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【混沌降生】"}],"trade":{"ids":{"explicit":["explicit.stat_2449392400"],"fractured":["fractured.stat_2449392400"]}}}
 {"ref":"1 Added Passive Skill is Brand Loyalty","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【忠诚钢印】"}],"trade":{"ids":{"explicit":["explicit.stat_3198006994"],"fractured":["fractured.stat_3198006994"]}}}
 {"ref":"1 Added Passive Skill is Brewed for Potency","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【力量萃取】"}],"trade":{"ids":{"explicit":["explicit.stat_3250272113"],"fractured":["fractured.stat_3250272113"]}}}
@@ -2627,7 +2627,7 @@
 {"ref":"1 Added Passive Skill is Capacitor","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【充能器】"}],"trade":{"ids":{"explicit":["explicit.stat_4025536654"],"fractured":["fractured.stat_4025536654"]}}}
 {"ref":"1 Added Passive Skill is Careful Handling","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【谨慎操纵】"}],"trade":{"ids":{"explicit":["explicit.stat_456502758"],"fractured":["fractured.stat_456502758"]}}}
 {"ref":"1 Added Passive Skill is Chilling Presence","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【惊寒降临】"}],"trade":{"ids":{"explicit":["explicit.stat_2834490860"]}}}
-{"ref":"1 Added Passive Skill is Chip Away","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【开凿】"}],"trade":{"ids":{"explicit":["explicit.stat_968069586"]}}}
+{"ref":"1 Added Passive Skill is Chip Away","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【开凿】"}],"trade":{"ids":{"explicit":["explicit.stat_968069586"],"fractured":["fractured.stat_968069586"]}}}
 {"ref":"1 Added Passive Skill is Circling Oblivion","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【循环湮灭】"}],"trade":{"ids":{"explicit":["explicit.stat_2129392647"],"fractured":["fractured.stat_2129392647"]}}}
 {"ref":"1 Added Passive Skill is Clarity of Purpose","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【心意已决】"}],"trade":{"ids":{"explicit":["explicit.stat_684087686"],"fractured":["fractured.stat_684087686"]}}}
 {"ref":"1 Added Passive Skill is Cold Conduction","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【寒冰导体】"}],"trade":{"ids":{"explicit":["explicit.stat_1274505521"]}}}
@@ -2729,7 +2729,7 @@
 {"ref":"1 Added Passive Skill is Liquid Inspiration","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【液化启迪】"}],"trade":{"ids":{"explicit":["explicit.stat_1094635162"],"fractured":["fractured.stat_1094635162"]}}}
 {"ref":"1 Added Passive Skill is Lord of Drought","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【旱魃】"}],"trade":{"ids":{"explicit":["explicit.stat_2055715585"],"fractured":["fractured.stat_2055715585"]}}}
 {"ref":"1 Added Passive Skill is Low Tolerance","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【低容忍】"}],"trade":{"ids":{"explicit":["explicit.stat_3989400244"]}}}
-{"ref":"1 Added Passive Skill is Mage Bane","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【破法】"}],"trade":{"ids":{"explicit":["explicit.stat_684155617"]}}}
+{"ref":"1 Added Passive Skill is Mage Bane","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【破法】"}],"trade":{"ids":{"explicit":["explicit.stat_684155617"],"fractured":["fractured.stat_684155617"]}}}
 {"ref":"1 Added Passive Skill is Mage Hunter","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【法师猎人】"}],"trade":{"ids":{"explicit":["explicit.stat_2118664144"],"fractured":["fractured.stat_2118664144"]}}}
 {"ref":"1 Added Passive Skill is Magnifier","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【放大器】"}],"trade":{"ids":{"explicit":["explicit.stat_2886441936"],"fractured":["fractured.stat_2886441936"]}}}
 {"ref":"1 Added Passive Skill is Martial Mastery","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【武艺专精】"}],"trade":{"ids":{"explicit":["explicit.stat_1015189426"],"fractured":["fractured.stat_1015189426"]}}}
@@ -2806,12 +2806,12 @@
 {"ref":"1 Added Passive Skill is Self-Control","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【自制】"}],"trade":{"ids":{"explicit":["explicit.stat_3025453294"],"fractured":["fractured.stat_3025453294"]}}}
 {"ref":"1 Added Passive Skill is Self-Fulfilling Prophecy","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【自圆其说】"}],"trade":{"ids":{"explicit":["explicit.stat_2644533453"]}}}
 {"ref":"1 Added Passive Skill is Septic Spells","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【降蛊】"}],"trade":{"ids":{"explicit":["explicit.stat_4290522695"]}}}
-{"ref":"1 Added Passive Skill is Set and Forget","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【高枕无忧】"}],"trade":{"ids":{"explicit":["explicit.stat_1101250813"]}}}
+{"ref":"1 Added Passive Skill is Set and Forget","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【高枕无忧】"}],"trade":{"ids":{"explicit":["explicit.stat_1101250813"],"fractured":["fractured.stat_1101250813"]}}}
 {"ref":"1 Added Passive Skill is Shifting Shadow","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【变换之影】"}],"trade":{"ids":{"explicit":["explicit.stat_1476913894"]}}}
 {"ref":"1 Added Passive Skill is Shrieking Bolts","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【呼啸飞箭】"}],"trade":{"ids":{"explicit":["explicit.stat_2783012144"],"fractured":["fractured.stat_2783012144"]}}}
 {"ref":"1 Added Passive Skill is Skeletal Atrophy","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【魔侍凋零】"}],"trade":{"ids":{"explicit":["explicit.stat_1290215329"],"fractured":["fractured.stat_1290215329"]}}}
 {"ref":"1 Added Passive Skill is Skullbreaker","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【碎颅斗士】"}],"trade":{"ids":{"explicit":["explicit.stat_315697256"],"fractured":["fractured.stat_315697256"]}}}
-{"ref":"1 Added Passive Skill is Sleepless Sentries","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【不眠哨卫】"}],"trade":{"ids":{"explicit":["explicit.stat_3993957711"]}}}
+{"ref":"1 Added Passive Skill is Sleepless Sentries","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【不眠哨卫】"}],"trade":{"ids":{"explicit":["explicit.stat_3993957711"],"fractured":["fractured.stat_3993957711"]}}}
 {"ref":"1 Added Passive Skill is Smite the Weak","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【截心击】"}],"trade":{"ids":{"explicit":["explicit.stat_540300548"],"fractured":["fractured.stat_540300548"]}}}
 {"ref":"1 Added Passive Skill is Smoking Remains","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【燃烬之烟】"}],"trade":{"ids":{"explicit":["explicit.stat_2322980282"],"fractured":["fractured.stat_2322980282"]}}}
 {"ref":"1 Added Passive Skill is Snaring Spirits","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【激荡狂灵】"}],"trade":{"ids":{"explicit":["explicit.stat_3319205340"]}}}
@@ -2819,7 +2819,7 @@
 {"ref":"1 Added Passive Skill is Special Reserve","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【特别预备】"}],"trade":{"ids":{"explicit":["explicit.stat_4235300427"],"fractured":["fractured.stat_4235300427"]}}}
 {"ref":"1 Added Passive Skill is Spiked Concoction","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【钉刺调和】"}],"trade":{"ids":{"explicit":["explicit.stat_3372255769"],"fractured":["fractured.stat_3372255769"]}}}
 {"ref":"1 Added Passive Skill is Spiteful Presence","better":1,"matchers":[{"string":"其中 1 个增加的天赋为怨恨姿态"}],"trade":{"ids":{"explicit":["explicit.stat_1134501245"],"fractured":["fractured.stat_1134501245"]}}}
-{"ref":"1 Added Passive Skill is Spring Back","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【折回冲刺】"}],"trade":{"ids":{"explicit":["explicit.stat_3603695769"]}}}
+{"ref":"1 Added Passive Skill is Spring Back","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【折回冲刺】"}],"trade":{"ids":{"explicit":["explicit.stat_3603695769"],"fractured":["fractured.stat_3603695769"]}}}
 {"ref":"1 Added Passive Skill is Steady Torment","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【缓慢折磨】"}],"trade":{"ids":{"explicit":["explicit.stat_3500334379"],"fractured":["fractured.stat_3500334379"]}}}
 {"ref":"1 Added Passive Skill is Stoic Focus","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【忍耐专注】"}],"trade":{"ids":{"explicit":["explicit.stat_1088949570"],"fractured":["fractured.stat_1088949570"]}}}
 {"ref":"1 Added Passive Skill is Storm Drinker","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【风暴痛饮】"}],"trade":{"ids":{"explicit":["explicit.stat_2087561637"],"fractured":["fractured.stat_2087561637"]}}}
@@ -2847,7 +2847,7 @@
 {"ref":"1 Added Passive Skill is Untouchable","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【不可触及】"}],"trade":{"ids":{"explicit":["explicit.stat_2758966888"],"fractured":["fractured.stat_2758966888"]}}}
 {"ref":"1 Added Passive Skill is Unwavering Focus","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【不动专注】"}],"trade":{"ids":{"explicit":["explicit.stat_367638058"]}}}
 {"ref":"1 Added Passive Skill is Unwaveringly Evil","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【不动之恶】"}],"trade":{"ids":{"explicit":["explicit.stat_2788982914"],"fractured":["fractured.stat_2788982914"]}}}
-{"ref":"1 Added Passive Skill is Vast Power","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【无垠之力】"}],"trade":{"ids":{"explicit":["explicit.stat_1996576560"]}}}
+{"ref":"1 Added Passive Skill is Vast Power","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【无垠之力】"}],"trade":{"ids":{"explicit":["explicit.stat_1996576560"],"fractured":["fractured.stat_1996576560"]}}}
 {"ref":"1 Added Passive Skill is Veteran Defender","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【防御老手】"}],"trade":{"ids":{"explicit":["explicit.stat_664010431"],"fractured":["fractured.stat_664010431"]}}}
 {"ref":"1 Added Passive Skill is Vicious Bite","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【恶毒撕咬】"}],"trade":{"ids":{"explicit":["explicit.stat_882876854"],"fractured":["fractured.stat_882876854"]}}}
 {"ref":"1 Added Passive Skill is Vicious Guard","better":1,"matchers":[{"string":"其中 1 个增加的天赋为【恶毒守卫】"}],"trade":{"ids":{"explicit":["explicit.stat_4054656914"],"fractured":["fractured.stat_4054656914"]}}}
@@ -4337,6 +4337,7 @@
 {"ref":"Herald of Thunder also creates a storm when you Shock an Enemy","better":1,"matchers":[{"string":"你使敌人感电时，【闪电之捷】始终产生一个风暴"}],"trade":{"ids":{"explicit":["explicit.stat_1964607303"]}}}
 {"ref":"Herald of Thunder has #% increased Buff Effect","better":1,"matchers":[{"string":"【闪电之捷】的增益效果提高 #%"},{"string":"【闪电之捷】的增益效果降低 #%","negate":true}],"trade":{"ids":{"explicit":["explicit.stat_3814686091"],"implicit":["implicit.stat_3814686091"]}}}
 {"ref":"Herald of Thunder has #% increased Mana Reservation Efficiency","better":1,"matchers":[{"string":"闪电之捷的魔力保留效能提高 #%"},{"string":"闪电之捷的魔力保留效能降低 #%","negate":true}],"trade":{"ids":{"explicit":["explicit.stat_3817220109","explicit.stat_3959101898"],"enchant":["enchant.stat_3817220109","enchant.stat_3959101898"]}}}
+{"ref":"Herald of Thunder's Storms Hit Enemies with #% increased Frequency","better":1,"matchers":[{"string":"闪电之捷的风暴击中敌人的频率提高 #%"},{"string":"闪电之捷的风暴击中敌人频率提高 #%"},{"string":"闪电之捷的风暴击中敌人的频率降低 #%"},{"string":"闪电之捷的风暴击中敌人频率降低 #%"}],"trade":{"ids":{"explicit":["explicit.stat_28299254"]}}}
 {"ref":"Hex Master","better":1,"matchers":[{"string":"邪法宗师"}],"trade":{"ids":{"explicit":["explicit.stat_3849554033"],"scourge":["scourge.stat_3849554033"]}}}
 {"ref":"Hex Reflection","better":1,"matchers":[{"string":"魔蛊反射"}],"trade":{"ids":{"explicit":["explicit.stat_1731672673"]}}}
 {"ref":"Hexblast deals #% increased Damage","better":1,"matchers":[{"string":"魔蛊爆炸的伤害提高 #%"},{"string":"魔蛊爆炸的伤害降低 #%","negate":true}],"trade":{"ids":{"enchant":["enchant.stat_2318562335"]}}}
@@ -4559,6 +4560,7 @@
 {"ref":"Life that would be lost by taking Damage is instead Reserved\nuntil you take no Damage to Life for # second","better":1,"matchers":[{"string":"失去的生命被保留起来，\n直到你的生命在 # 秒内没有再受到伤害"},{"string":"失去的生命被保留起来，\n直到你的生命在 # 秒内没有再受到伤害"}],"trade":{"ids":{"explicit":["explicit.stat_1777740627"]}}}
 {"ref":"Lifeforce dropped by Harvest Monsters in your Maps is Duplicated","better":1,"matchers":[{"string":"你的地图中的古灵庄园怪物掉落的命能被复制"},{"string":"古灵庄园怪物掉落的命能被复制"}],"trade":{"ids":{"enchant":["enchant.stat_3250634678"]}}}
 {"ref":"Light Radius is based on Energy Shield instead of Life","better":1,"matchers":[{"string":"照亮范围将基于能量护盾的属性"}],"trade":{"ids":{"explicit":["explicit.stat_3836017971"],"fractured":["fractured.stat_3836017971"],"crafted":["crafted.stat_3836017971"]}}}
+{"ref":"Lightning Arrow hits # additional Enemy","better":1,"matchers":[{"string":"闪电箭矢击中额外 # 个敌人"},{"string":"闪电箭矢击中目标附近额外 # 名敌人"},{"string":"闪电箭矢击中额外 # 个敌人"},{"string":"闪电箭矢击中目标附近额外 # 名敌人"}],"trade":{"ids":{"enchant":["enchant.stat_1901955093"]}}}
 {"ref":"Lightning Conduit deals #% increased Damage","better":1,"matchers":[{"string":"闪电环廊造成的伤害增加#%"},{"string":"闪电通道造成的伤害增加 #%"},{"string":"闪电环廊造成的伤害降低#%","negate":true},{"string":"闪电通道造成的伤害降低 #%","negate":true}],"trade":{"ids":{"enchant":["enchant.stat_2511245659"]}}}
 {"ref":"Lightning Conduit has #% increased Area of Effect","better":1,"matchers":[{"string":"闪电环廊的效果区域增加#%"},{"string":"闪电通道的效果区域增加 #%"},{"string":"闪电环廊的效果区域减少#%","negate":true},{"string":"闪电通道的效果区域减少 #%","negate":true}],"trade":{"ids":{"enchant":["enchant.stat_2252888886"]}}}
 {"ref":"Lightning Conduit has #% increased Cast Speed","better":1,"matchers":[{"string":"闪电环廊的施法速度增加#%"},{"string":"闪电通道的施法速度增加 #%"}],"trade":{"ids":{"enchant":["enchant.stat_2437571727"]}}}
