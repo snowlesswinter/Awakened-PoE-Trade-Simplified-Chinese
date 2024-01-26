@@ -108,7 +108,7 @@ export default defineComponent({
       }
     })
 
-    Host.onEvent('MAIN->OVERLAY::focus-change', async (state) => {
+    Host.onEvent('MAIN->OVERLAY::focus-change', (state) => {
       active.value = state.overlay
       gameFocused.value = state.game
 
@@ -118,7 +118,7 @@ export default defineComponent({
             hide(w.wmId)
           }
         }
-        await updateImage()
+        try { updateImage() } catch (e) {}
       } else {
         for (const w of widgets.value) {
           if (w.wmFlags.includes('hide-on-focus')) {
@@ -131,10 +131,10 @@ export default defineComponent({
           for (const widget of AppConfig().widgets) {
             if (widget.wmTitle === '今日迷宫路线图') {
               (widget as ImageStripWidget).images = [
-                { id: 1, url: imgArray[0] },
-                { id: 2, url: imgArray[1] },
-                { id: 3, url: imgArray[2] },
-                { id: 4, url: imgArray[3] }
+                { id: 1, url: imgArray[0]! },
+                { id: 2, url: imgArray[1]! },
+                { id: 3, url: imgArray[2]! },
+                { id: 4, url: imgArray[3]! }
               ]
               NoLabImg = false
             }
