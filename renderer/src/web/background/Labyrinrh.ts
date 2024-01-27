@@ -1,6 +1,13 @@
 import { Host } from './IPC'
+
+let lastUpdateTime = 0
+export let imgArray: string[]
+
 async function getLabyrinrhImage () {
-  const imgArray: string[] = []
+  if (Date.now() - lastUpdateTime < 10 * 60 * 1000) {
+    return imgArray
+  }
+  const imgArray2: string[] = []
   const response = await Host.proxy('www.poelab.com/')
   if (response.ok) {
     const labweb = new DOMParser().parseFromString(await response.text(), 'text/html')
@@ -9,13 +16,13 @@ async function getLabyrinrhImage () {
       const labweb = new DOMParser().parseFromString((await response.text()), 'text/html')
       const imgweb = labweb.getElementById('inner-zoomed-container')!.querySelector('img')!.src
       // imgArray.push('proxy/' + imgweb.replace('https://', ''))
-      imgArray.push(imgweb)
+      imgArray2.push(imgweb)
     }
     // Host.logs.value += imgweb + '\n'
   }
-  return imgArray
+  lastUpdateTime = Date.now()
+  return imgArray2
 }
-export let imgArray: string[]
 
 export async function updateImage () {
   getLabyrinrhImage().then(value => {
