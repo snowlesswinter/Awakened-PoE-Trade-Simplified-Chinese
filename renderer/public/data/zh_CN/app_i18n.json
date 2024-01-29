@@ -353,6 +353,7 @@
     "auto_search": "按住则自动搜索",
     "select_stock": "总是选择\"存量\"过滤",
     "select_offline": "默认选择\"在线及离线\"查询",
-    "show_prediction": "显示价格预测"
+    "show_prediction": "显示价格预测",
+    "remember_currency": "保存购买时货币选项"
   }
 }
