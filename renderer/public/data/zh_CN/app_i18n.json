@@ -257,7 +257,7 @@
     "reset_key": "重置"
   },
   "stash_search": {
-    "enable_keys": "Keys",
+    "enable_keys": "启动本组快捷键",
     "name": "仓库页搜索",
     "search_text": "搜索文本或正则",
     "friendly_name": "易记名称"
