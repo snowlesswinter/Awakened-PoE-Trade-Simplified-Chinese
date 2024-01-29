@@ -223,7 +223,7 @@ interface FetchResult {
     price?: {
       amount: number
       currency: string
-      type: '~price'
+      type: string
     }
     account: Account
   }
@@ -239,6 +239,7 @@ export interface PricingResult {
   relativeDate: string
   priceAmount: number
   priceCurrency: string
+  priceType: string
   isMine: boolean
   hasNote: boolean
   accountName: string
@@ -616,6 +617,7 @@ export async function requestResults (
       relativeDate: DateTime.fromISO(result.listing.indexed).toRelative({ style: 'short' }) ?? '',
       priceAmount: result.listing.price?.amount ?? 0,
       priceCurrency: result.listing.price?.currency ?? 'no price',
+      priceType: result.listing.price?.type ?? '',
       hasNote: result.item.note != null,
       isMine: (result.listing.account.name === opts.accountName),
       ign: result.listing.account.lastCharacterName,
