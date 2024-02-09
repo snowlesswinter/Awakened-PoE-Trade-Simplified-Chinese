@@ -25,6 +25,8 @@ export class HttpProxy {
     server: Server,
     logger: Logger
   ) {
+    const rootCas = require('ssl-root-cas').create()
+    require('https').globalAgent.options.ca = rootCas
     server.addListener('request', (req, res) => {
       if (!req.url?.startsWith('/proxy/')) return
       const host = req.url.split('/', 3)[2]
