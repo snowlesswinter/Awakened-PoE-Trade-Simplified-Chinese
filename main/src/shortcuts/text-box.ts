@@ -63,3 +63,15 @@ export function stashSearch (
     uIOhook.keyTap(Key.Enter)
   })
 }
+
+export function auctionSearch (
+  text: string,
+  clipboard: HostClipboard,
+  overlay: OverlayWindow
+) {
+  clipboard.restoreShortly((clipboard) => {
+    overlay.assertGameActive()
+    clipboard.writeText(text)
+    uIOhook.keyTap(Key.V)
+  })
+}
