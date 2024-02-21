@@ -258,6 +258,14 @@ export class Shortcuts {
         payload: { target: 'auction-search-sub' }
       })
     })
+
+    const fillNameShortcut = 'Ctrl + 3'
+    globalShortcut.register(fillNameShortcut, () => {
+      this.server.sendEventTo('last-active', {
+        name: 'MAIN->CLIENT::widget-action',
+        payload: { target: 'auction-search-name' }
+      })
+    })
   }
 }
 

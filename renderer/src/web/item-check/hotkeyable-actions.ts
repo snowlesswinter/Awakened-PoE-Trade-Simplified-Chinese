@@ -1,9 +1,9 @@
 import { Host } from '@/web/background/IPC'
 import { AppConfig } from '@/web/Config'
-import { ParsedItem, parseClipboard, ItemCategory } from '@/parser'
+import { ParsedItem, parseClipboard, ItemCategory, ItemRarity } from '@/parser'
 
 const POEDB_LANGS = { 'en': 'us', 'ru': 'ru', 'cmn-Hant': 'tw', 'zh_CN': 'cn', 'ko': 'kr' }
-const AUCTION_FIELDS = { main: '', sub: '' }
+const AUCTION_FIELDS = { main: '', sub: '', unique_name: '' }
 
 const categoryMapper = {
   'Map': '地图',
@@ -45,24 +45,75 @@ const categoryMapper = {
   'Heist Cloak': '夺宝奇兵物品',
   'Trinket': '夺宝饰品',
   'Invitation': '杂项地图',
-  'Gem': '宝石',
+  'Gem': '技能石',
   'Currency': '通货',
   'Divination Card': '命运卡',
   'Voidstone': 'Voidstone', // 游戏已经删除该内容
   'Sentinel': 'Sentinel', // 游戏已经删除该内容
   'Memory Line': '回忆',
-  'Sanctum Relic': '杂项地图',
+  'Sanctum Relic': '遗迹',
   'Tincture': '挑战赛季物品',
   'Charm': '挑战赛季物品'
 }
 
-function mapToChineseCategory (c: ItemCategory): string {
-  return categoryMapper[c]
+function checkCategory (category: string, desc: string, end: boolean = true): boolean {
+  if (end) return desc.length >= category.length && desc.slice(-category.length) === category
+  return desc.length > category.length && desc.slice(0, category.length) === category
 }
 
-function extractAuctionFields (item: ParsedItem) {
-  AUCTION_FIELDS.main = item.category ? mapToChineseCategory(item.category) : ''
-  AUCTION_FIELDS.sub = item.info.name
+function mapToChineseCategory (category: ItemCategory | undefined, baseTypeName: string, rawText: string): string {
+  if (!category) {
+    if (checkCategory('圣甲虫', baseTypeName)) return '圣甲虫'
+
+    const firstLine = rawText.split('\n')[0].trim()
+    if (checkCategory('地图碎片', firstLine)) return '地图碎片'
+
+    return ''
+  }
+
+  // "Expedition Logbook" 这种类型居然没有包含在ItemCategory里面，BUG真多
+  if (checkCategory('先祖秘藏日志', baseTypeName)) return '先祖秘藏物品'
+
+  const mapped = categoryMapper[category]
+
+  // 一些物品子类太多，会在拍卖行另开一个一级的类别，例如精华
+  if (mapped === '通货') {
+    if (checkCategory('精华', baseTypeName)) return '精华'
+    if (checkCategory('共振器', baseTypeName)) return '探索物品'
+    if (checkCategory('孕育石', baseTypeName)) return '孕育石'
+    if (checkCategory('圣油', baseTypeName)) return '圣油'
+    if (checkCategory('异域铸币', baseTypeName)) return '先祖秘藏物品'
+    if (checkCategory('废金属', baseTypeName)) return '先祖秘藏物品'
+    if (checkCategory('黄芪', baseTypeName)) return '先祖秘藏物品'
+    if (checkCategory('葬礼徽章', baseTypeName)) return '先祖秘藏物品'
+    if (checkCategory('污秽', baseTypeName, false)) return '异度天灾通货物品'
+    if (checkCategory('梦魇宝珠', baseTypeName)) return '梦魇宝珠'
+
+    const firstLine = rawText.split('\n')[0].trim()
+    if (checkCategory('灵柩', firstLine)) return '挑战赛季物品'
+  }
+
+  if (mapped === '技能石') {
+    const firstLine = rawText.split('\n')[0].trim()
+    if (checkCategory('辅助宝石', firstLine)) return '辅助技能石'
+    return '主动技能石'
+  }
+
+  if (mapped === '药剂') {
+    const firstLine = rawText.split('\n')[0].trim()
+    if (checkCategory('生命药剂', firstLine)) return '生命药剂'
+    if (checkCategory('魔力药剂', firstLine)) return '魔力药剂'
+    if (checkCategory('功能药剂', firstLine)) return '非恢复类药剂'
+  }
+
+  return mapped
+}
+
+function extractAuctionFields (parsed: ParsedItem) {
+  const item = JSON.parse(JSON.stringify(parsed)) // 不知道为什么，如果不做转换，item.baseType无法引用
+  AUCTION_FIELDS.main = mapToChineseCategory(item.category, item.info.name, item.rawText)
+  AUCTION_FIELDS.sub = item.baseType ? item.baseType : item.info.name
+  AUCTION_FIELDS.unique_name = item.rarity ? (item.rarity === ItemRarity.Unique ? item.info.name : '') : ''
 }
 
 export function registerActions () {
@@ -95,6 +146,11 @@ export function registerActions () {
       Host.sendEvent({
         name: 'CLIENT->MAIN::user-action',
         payload: { action: 'auction-search', text: AUCTION_FIELDS.sub }
+      })
+    } else if (e.target === 'auction-search-name') {
+      Host.sendEvent({
+        name: 'CLIENT->MAIN::user-action',
+        payload: { action: 'auction-search', text: AUCTION_FIELDS.unique_name }
       })
     }
   })
