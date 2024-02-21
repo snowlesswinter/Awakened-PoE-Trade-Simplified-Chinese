@@ -1,7 +1,7 @@
 import { screen, globalShortcut } from 'electron'
 import { uIOhook, UiohookKey, UiohookWheelEvent } from 'uiohook-napi'
 import { isModKey, KeyToElectron, mergeTwoHotkeys } from '../../../ipc/KeyToCode'
-import { typeInChat, stashSearch } from './text-box'
+import { typeInChat, stashSearch, auctionSearch } from './text-box'
 import { WidgetAreaTracker } from '../windowing/WidgetAreaTracker'
 import { HostClipboard } from './HostClipboard'
 import { OcrWorker } from '../vision/link-main'
@@ -60,6 +60,8 @@ export class Shortcuts {
     this.server.onEventAnyClient('CLIENT->MAIN::user-action', (e) => {
       if (e.action === 'stash-search') {
         stashSearch(e.text, this.clipboard, this.overlay)
+      } else if (e.action === 'auction-search') {
+        auctionSearch(e.text, this.clipboard, this.overlay)
       }
     })
 
@@ -215,10 +217,47 @@ export class Shortcuts {
         globalShortcut.unregister(shortcutToElectron(entry.shortcut))
       }
     }
+
+    this.registerAuctionSearchShortcuts()
   }
 
   private unregister () {
     globalShortcut.unregisterAll()
+  }
+
+  private registerAuctionSearchShortcuts () {
+    const prepareShortcut = 'Ctrl + B'
+    globalShortcut.register(prepareShortcut, () => {
+      // keepModKeys = true
+      const nonModKey = prepareShortcut.split(' + ').filter(key => !isModKey(key))[0]
+      uIOhook.keyToggle(UiohookKey[nonModKey as UiohookKeyT], 'up')
+
+      this.clipboard.readItemText()
+        .then(clipboard => {
+          this.server.sendEventTo('last-active', {
+            name: 'MAIN->CLIENT::item-text',
+            payload: { target: 'prepare-auction-search', clipboard, position: { x: 0, y: 0 }, focusOverlay: Boolean(false) }
+          })
+        }).catch(() => { })
+
+      pressKeysToCopyItemText(prepareShortcut.split(' + ').filter(key => isModKey(key)), 'Ctrl')
+    })
+
+    const fillMainShortcut = 'Ctrl + 1'
+    globalShortcut.register(fillMainShortcut, () => {
+      this.server.sendEventTo('last-active', {
+        name: 'MAIN->CLIENT::widget-action',
+        payload: { target: 'auction-search-main' }
+      })
+    })
+
+    const fillSubShortcut = 'Ctrl + 2'
+    globalShortcut.register(fillSubShortcut, () => {
+      this.server.sendEventTo('last-active', {
+        name: 'MAIN->CLIENT::widget-action',
+        payload: { target: 'auction-search-sub' }
+      })
+    })
   }
 }
 

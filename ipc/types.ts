@@ -177,6 +177,9 @@ type IpcUserAction =
   } | {
     action: 'stash-search'
     text: string
+  } | {
+    action: 'auction-search'
+    text: string
   }>
 
 interface Event<TName extends string, TPayload = undefined> {
