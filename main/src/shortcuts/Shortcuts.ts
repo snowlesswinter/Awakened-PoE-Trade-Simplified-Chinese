@@ -219,6 +219,7 @@ export class Shortcuts {
     }
 
     this.registerAuctionSearchShortcuts()
+    this.registerDoubleSkillShortcuts()
   }
 
   private unregister () {
@@ -265,6 +266,15 @@ export class Shortcuts {
         name: 'MAIN->CLIENT::widget-action',
         payload: { target: 'auction-search-name' }
       })
+    })
+  }
+
+  private registerDoubleSkillShortcuts () {
+    globalShortcut.register('1', () => {
+      uIOhook.keyTap(UiohookKey.F6)
+      setTimeout(() => {
+        uIOhook.keyTap(UiohookKey.F7)
+      }, 100)
     })
   }
 }
