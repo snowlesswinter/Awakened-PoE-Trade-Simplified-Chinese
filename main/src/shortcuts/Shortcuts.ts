@@ -21,6 +21,9 @@ export class Shortcuts {
   private logKeys = false
   private areaTracker: WidgetAreaTracker
   private clipboard: HostClipboard
+  private pendingKey = false
+  private lastTriggerTime1: number = +new Date()
+  private lastTriggerTime2: number = +new Date()
 
   static async create (
     logger: Logger,
@@ -269,13 +272,42 @@ export class Shortcuts {
     })
   }
 
+  // 直接简单触发的话，会有以下问题：
+  //   1. 消息过于频繁，被服务器踢下线
+  //   2. 第二个键被新事件抢在前面，导致哑炮
+  //
+  // 所以干脆放弃直接触发，而是采用一个周期式的方式轮流触发两个键。在下一
+  // 个事件等待执行的过程中，无论按多少次，都不会触发一个新事件。
+  // 并且，其实这个功能就是给爆灵术用的，那还可以再加一个小优化：
+  //   第一个键，也就是亵渎，是不用触发太频繁的，0.5秒一次够了。
   private registerDoubleSkillShortcuts () {
+    const minimumInterval = 100
     globalShortcut.register('1', () => {
-      uIOhook.keyTap(UiohookKey.F6)
-      setTimeout(() => {
-        uIOhook.keyTap(UiohookKey.F7)
-      }, 100)
+      if (!this.pendingKey) return
+      
+      const currentTime = +new Date()
+      if (currentTime - this.lastTriggerTime1 < 500) {
+        if (currentTime - this.lastTriggerTime2 < minimumInterval) {
+          this.delayTriggerKey2(minimumInterval)
+        } else {
+          uIOhook.keyTap(UiohookKey.F7)
+          this.lastTriggerTime2 = currentTime
+        }
+      } else {
+        uIOhook.keyTap(UiohookKey.F6)
+        this.lastTriggerTime1 = currentTime
+        this.delayTriggerKey2(minimumInterval)
+      }
     })
+  }
+
+  private delayTriggerKey2 (minimumInterval: number) {
+    this.pendingKey = true
+    setTimeout(() => {
+      uIOhook.keyTap(UiohookKey.F7)
+      this.lastTriggerTime2 = +new Date()
+      this.pendingKey = false
+    }, minimumInterval)
   }
 }
 
