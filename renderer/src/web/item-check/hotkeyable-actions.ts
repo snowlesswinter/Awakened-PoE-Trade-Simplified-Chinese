@@ -79,6 +79,7 @@ function mapToChineseCategory (category: ItemCategory | undefined, baseTypeName:
   // 一些物品子类太多，会在拍卖行另开一个一级的类别，例如精华
   if (mapped === '通货') {
     if (checkCategory('精华', baseTypeName)) return '精华'
+    if (checkCategory('化石', baseTypeName)) return '探索物品'
     if (checkCategory('共振器', baseTypeName)) return '探索物品'
     if (checkCategory('孕育石', baseTypeName)) return '孕育石'
     if (checkCategory('圣油', baseTypeName)) return '圣油'
@@ -87,7 +88,8 @@ function mapToChineseCategory (category: ItemCategory | undefined, baseTypeName:
     if (checkCategory('黄芪', baseTypeName)) return '先祖秘藏物品'
     if (checkCategory('葬礼徽章', baseTypeName)) return '先祖秘藏物品'
     if (checkCategory('污秽', baseTypeName, false)) return '异度天灾通货物品'
-    if (checkCategory('梦魇宝珠', baseTypeName)) return '梦魇宝珠'
+    if (checkCategory('雾魇宝珠', baseTypeName)) return '雾魇宝珠'
+    if (checkCategory('禁域典籍', baseTypeName)) return '杂项地图'
 
     const firstLine = rawText.split('\n')[0].trim()
     if (checkCategory('灵柩', firstLine)) return '挑战赛季物品'

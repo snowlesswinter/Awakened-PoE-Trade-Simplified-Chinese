@@ -222,7 +222,8 @@ export class Shortcuts {
     }
 
     this.registerAuctionSearchShortcuts()
-    this.registerDoubleSkillShortcuts()
+    if (false) // 不太好用，先屏蔽
+      this.registerDoubleSkillShortcuts()
   }
 
   private unregister () {
