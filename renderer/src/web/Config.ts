@@ -86,7 +86,7 @@ export function poeWebApi () {
     case 'en': return 'www.pathofexile.com'
     case 'ru': return 'ru.pathofexile.com'
     case 'cmn-Hant': return (realm === 'pc-garena')
-      ? 'web.poe.garena.tw'
+      ? 'pathofexile.tw'
       : 'www.pathofexile.com'
     case 'zh_CN': return (realm === 'pc-tencent')
       ? 'poe.game.qq.com'
