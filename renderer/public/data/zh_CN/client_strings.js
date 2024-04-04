@@ -13,6 +13,7 @@ export default {
   RARITY: '稀 有 度: ',
   ITEM_CLASS: '物品类别: ',
   ITEM_LEVEL: '物品等级: ',
+  CORPSE_LEVEL: '灵柩等级: ',
   TALISMAN_TIER: '魔符等级: ',
   GEM_LEVEL: '等级: ',
   STACK_SIZE: '堆叠数量: ',
