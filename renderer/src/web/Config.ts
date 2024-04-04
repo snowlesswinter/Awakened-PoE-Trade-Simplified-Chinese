@@ -102,7 +102,7 @@ export interface Config {
   overlayBackground: string
   overlayBackgroundClose: boolean
   restoreClipboard: boolean
-  poesessid: string
+  cookies: string
   commands: Array<{
     text: string
     hotkey: string | null
@@ -160,7 +160,7 @@ export const defaultConfig = (): Config => ({
   accountName: '',
   stashScroll: true,
   language: 'zh_CN',
-  poesessid: '',
+  cookies: '',
   realm: 'pc-ggg',
   fontSize: 16,
   widgets: [
@@ -665,6 +665,6 @@ function getConfigForHost (): HostConfig {
     windowTitle: config.windowTitle,
     language: config.language,
     realm: config.realm,
-    poesessid: config.poesessid
+    cookies: config.cookies
   }
 }

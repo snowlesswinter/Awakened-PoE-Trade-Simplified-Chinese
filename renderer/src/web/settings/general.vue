@@ -23,8 +23,8 @@
         <ui-radio v-model="realm" value="pc-ggg">{{ t('realm_intl') }}</ui-radio>
         <ui-radio v-model="realm" value="pc-tencent">{{ t('realm_tencent') }}</ui-radio>
         <div class="flex gap-x-1" v-show="realm === 'pc-tencent'">
-          <div :class="{ 'text-red-500': poesessid.length !== 32 }">{{ t('POESESSID') }}</div>
-          <span><input v-model="poesessid" class="rounded bg-gray-900 px-2 flex-1"></span>
+          <div>{{ t('cookies') }}</div>
+          <span><input v-model="cookies" class="rounded bg-gray-900 px-2 flex-1"></span>
         </div>
       </div>
     </div>
@@ -97,7 +97,7 @@ export default defineComponent({
         }
       }),
       realm: configModelValue(() => props.config, 'realm'),
-      poesessid: configModelValue(() => props.config, 'poesessid'),
+      cookies: configModelValue(() => props.config, 'cookies'),
       restoreClipboard: configModelValue(() => props.config, 'restoreClipboard'),
       showAttachNotification: configModelValue(() => props.config, 'showAttachNotification'),
       windowTitle: configModelValue(() => props.config, 'windowTitle')

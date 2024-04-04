@@ -18,7 +18,7 @@ export const PROXY_HOSTS = [
 
 export class HttpProxy {
   cookiesForPoe = new Map<string, string>()
-  private poesessid: string = ''
+  private cookies: string = ''
   private realm: string = ''
 
   constructor (
@@ -32,13 +32,14 @@ export class HttpProxy {
       const official = PROXY_HOSTS.find(entry => entry.host === host)?.official
       if (official === undefined) return req.destroy()
 
-      if (this.realm === 'pc-tencent' && host === 'poe.game.qq.com'){
-              this.cookiesForPoe.set('POESESSID', this.poesessid)}
-      const cookie = (official)
+
+      let cookie = (official)
           ? Array.from(this.cookiesForPoe.entries())
               .map(([key, value]) => `${key}=${value}`)
               .join('; ')
           : ''
+      if (this.realm === 'pc-tencent' && host === 'poe.game.qq.com'){
+        cookie = this.cookies}
 
       const proxyReq = https.request(
         'https://' + req.url.slice('/proxy/'.length),
@@ -62,8 +63,8 @@ export class HttpProxy {
     })
   }
 
-  updateCookies( poesessid:string, realm:string ) {
-    this.poesessid = poesessid
+  updateCookies( cookies:string, realm:string ) {
+    this.cookies = cookies
     this.realm = realm
   }
 
