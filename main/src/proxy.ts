@@ -41,17 +41,29 @@ export class HttpProxy {
       if (this.realm === 'pc-tencent' && host === 'poe.game.qq.com'){
         cookie = this.cookies}
 
+      const options = this.realm === 'pc-tencent' && host === 'poe.game.qq.com' ? {
+        method: req.method,
+        headers: {
+          ...req.headers,
+          host: host,
+          cookie: cookie,
+          'user-agent': app.userAgentFallback,
+          Origin: 'https://poe.game.qq.com',
+          Host: 'poe.game.qq.com',
+          'X-Requested-With': 'XMLHttpRequest'
+        }
+      } : {
+        method: req.method,
+        headers: {
+          ...req.headers,
+          host: host,
+          cookie: cookie,
+          'user-agent': app.userAgentFallback
+        }
+      }
       const proxyReq = https.request(
         'https://' + req.url.slice('/proxy/'.length),
-        {
-          method: req.method,
-          headers: {
-            ...req.headers,
-            host: host,
-            cookie: cookie,
-            'user-agent': app.userAgentFallback
-          }
-        }, (proxyRes) => {
+          options, (proxyRes) => {
           res.writeHead(proxyRes.statusCode!, proxyRes.statusMessage!, proxyRes.rawHeaders)
           proxyRes.pipe(res)
         })
