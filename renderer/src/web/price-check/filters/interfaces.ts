@@ -33,6 +33,7 @@ export interface ItemFilters {
   blueSockets?: FilterNumeric
   corrupted?: {
     value: boolean
+    exact?: boolean
   }
   fractured?: {
     value: boolean
