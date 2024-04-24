@@ -3210,7 +3210,7 @@
 {"ref":"Attack Critical Strikes ignore Enemy Monster Elemental Resistances","better":1,"matchers":[{"string":"暴击攻击无视敌人的元素抗性"}],"trade":{"ids":{"implicit":["implicit.stat_2170876738"]}}}
 {"ref":"Attack Hits against Bleeding Enemies have #% chance to Blind","better":1,"matchers":[{"string":"攻击击中流血的敌人时有 #% 的几率造成致盲"}],"trade":{"ids":{"explicit":["explicit.stat_4204320922"]}}}
 {"ref":"Attack Hits against Blinded Enemies have #% chance to Maim","better":1,"matchers":[{"string":"攻击击中致盲的敌人时有 #% 的几率造成瘫痪"}],"trade":{"ids":{"explicit":["explicit.stat_1291726336"]}}}
-{"ref":"Attack Modifiers are #% scarcer","better":1,"matchers":[{"string":"攻击词缀稀有度提高 #%"},{"string":"攻击词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_3923060556"]}}}
+{"ref":"Attack Modifiers are #% scarcer","better":1,"matchers":[{"string":"攻击词缀罕见程度提高 #%"},{"string":"攻击词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_3923060556"]}}}
 {"ref":"Attack Skills gain #% of Physical Damage as Extra Fire Damage per Socketed Red Gem","better":1,"matchers":[{"string":"每个插入的红色技能石都使 #% 的物理伤害转化为额外火焰伤害"},{"string":"每个插入的红色技能石都使攻击技能获得 #% 物理伤害的额外火焰伤害"}],"trade":{"ids":{"explicit":["explicit.stat_1302700515"]}}}
 {"ref":"Attack Skills have +# to maximum number of Summoned Totems","better":1,"matchers":[{"string":"攻击的技能 # 召唤图腾数量上限"}],"trade":{"ids":{"explicit":["explicit.stat_3266394681"]}}}
 {"ref":"Attack Skills have Added Lightning Damage equal to #% of maximum Mana","better":1,"matchers":[{"string":"攻击技能附加闪电伤害，等于最大魔力的 #%"}],"trade":{"ids":{"explicit":["explicit.stat_2778228111"]}}}
@@ -3244,7 +3244,7 @@
 {"ref":"Attacks with this Weapon Penetrate #% Elemental Resistances","better":1,"matchers":[{"string":"该武器的攻击穿透 #% 的元素抗性"}],"trade":{"ids":{"explicit":["explicit.stat_4064396395"],"implicit":["implicit.stat_4064396395"],"fractured":["fractured.stat_4064396395"],"crafted":["crafted.stat_4064396395"]}}}
 {"ref":"Attacks with this Weapon Penetrate #% Fire Resistance","better":1,"matchers":[{"string":"该武器的攻击穿透 #% 的火焰抗性"}],"trade":{"ids":{"explicit":["explicit.stat_3398283493"],"fractured":["fractured.stat_3398283493"]}}}
 {"ref":"Attacks with this Weapon Penetrate #% Lightning Resistance","better":1,"matchers":[{"string":"该武器的攻击穿透 #% 的闪电抗性"}],"trade":{"ids":{"explicit":["explicit.stat_2387539034"],"fractured":["fractured.stat_2387539034"]}}}
-{"ref":"Attribute Modifiers are #% scarcer","better":1,"matchers":[{"string":"属性词缀稀有度提高 #%"},{"string":"能力词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_490739313"]}}}
+{"ref":"Attribute Modifiers are #% scarcer","better":1,"matchers":[{"string":"属性词缀罕见程度提高 #%"},{"string":"能力词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_490739313"]}}}
 {"ref":"Attribute Requirements can be satisfied by #% of Omniscience","better":1,"matchers":[{"string":"属性需求可由 #% 的全知满足"}],"trade":{"ids":{"explicit":["explicit.stat_3024338155"]}}}
 {"ref":"Aura Skills other than Anger are Disabled","better":1,"matchers":[{"string":"禁用除愤怒之外的其他光环技能"}],"trade":{"ids":{"explicit":["explicit.stat_2185337019"]}}}
 {"ref":"Aura Skills other than Clarity are Disabled","better":1,"matchers":[{"string":"禁用除清晰之外的其他光环技能"}],"trade":{"ids":{"explicit":["explicit.stat_2010835448"]}}}
@@ -3415,7 +3415,7 @@
 {"ref":"Carved to glorify # new faithful converted by High Templar Dominus","better":0,"matchers":[{"string":"赞美 # 名被神主多米纳斯转化的新信徒\n范围内的天赋被圣堂教团抑制","advanced":"赞美 # 名被神主多米纳斯（神主阿瓦留斯 - 玛萨留斯）转化的新信徒\n范围内的天赋被圣堂教团抑制"}],"trade":{"ids":{"explicit":["explicit.pseudo_timeless_jewel_dominus"]}}}
 {"ref":"Carved to glorify # new faithful converted by High Templar Maxarius","better":0,"matchers":[{"string":"赞美 # 名被神主玛萨留斯转化的新信徒\n范围内的天赋被圣堂教团抑制","advanced":"赞美 # 名被神主玛萨留斯（神主阿瓦留斯 - 玛萨留斯）转化的新信徒\n范围内的天赋被圣堂教团抑制"}],"trade":{"ids":{"explicit":["explicit.pseudo_timeless_jewel_maxarius"]}}}
 {"ref":"Cast Level 20 Fire Burst on Hit","better":1,"matchers":[{"string":"击中施放 20 级火焰爆破"}],"trade":{"ids":{"explicit":["explicit.stat_1621470436"],"fractured":["fractured.stat_1621470436"]}}}
-{"ref":"Caster Modifiers are #% scarcer","better":1,"matchers":[{"string":"施法词缀稀有度提高 #%"},{"string":"施法词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_2792647258"]}}}
+{"ref":"Caster Modifiers are #% scarcer","better":1,"matchers":[{"string":"施法词缀罕见程度提高 #%"},{"string":"施法词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_2792647258"]}}}
 {"ref":"Catarina's Veiled","better":0,"matchers":[{"string":"卡塔莉娜的影匿"},{"string":"Catarina's Veiled"}],"trade":{"ids":{"veiled":["veiled.mod_63772"]}}}
 {"ref":"Caustic Arrow has #% chance to inflict Withered on Hit for # second base Duration","better":1,"matchers":[{"string":"【腐蚀箭矢】击中后有 #% 的几率造成死亡凋零，持续 # 秒"},{"string":"【腐蚀箭矢】击中后有 #% 的几率造成死亡凋零，持续 # 秒"},{"string":"【腐蚀箭矢】击中后造成死亡凋零，持续 # 秒"},{"string":"【腐蚀箭矢】击中后造成死亡凋零，持续 # 秒"}],"trade":{"ids":{"enchant":["enchant.stat_1993913925"]}}}
 {"ref":"Celestial Footprints","better":1,"matchers":[{"string":"绚丽众星行走特效"}],"trade":{"ids":{"explicit":["explicit.stat_50381303"]}}}
@@ -3432,7 +3432,7 @@
 {"ref":"Chaos Damage taken does not bypass Energy Shield while not on Low Life","better":1,"matchers":[{"string":"未处于濒血状态时，受到的混沌伤害无法忽略能量护盾"}],"trade":{"ids":{"explicit":["explicit.stat_887556907"],"fractured":["fractured.stat_887556907"]}}}
 {"ref":"Chaos Damage taken does not bypass Minions' Energy Shield","better":1,"matchers":[{"string":"受到的混沌伤害无法穿透召唤生物的能量护盾"}],"trade":{"ids":{"explicit":["explicit.stat_3008104268"]}}}
 {"ref":"Chaos Golems deal #% increased Damage","better":1,"matchers":[{"string":"【混沌魔像】的伤害提高 #%"},{"string":"【混沌魔像】的伤害降低 #%","negate":true}],"trade":{"ids":{"enchant":["enchant.stat_2505115650"]}}}
-{"ref":"Chaos Modifiers are #% scarcer","better":1,"matchers":[{"string":"混沌词缀稀有度提高 #%"},{"string":"混沌词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_3320485076"]}}}
+{"ref":"Chaos Modifiers are #% scarcer","better":1,"matchers":[{"string":"混沌词缀罕见程度提高 #%"},{"string":"混沌词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_3320485076"]}}}
 {"ref":"Chaos Resistance is Zero","better":1,"matchers":[{"string":"混沌抗性归零"}],"trade":{"ids":{"explicit":["explicit.stat_2439129490"],"fractured":["fractured.stat_2439129490"]}}}
 {"ref":"Chaos Skills have #% chance to Ignite","better":1,"matchers":[{"string":"混沌技能有 #% 的几率点燃敌人"}],"trade":{"ids":{"explicit":["explicit.stat_3573128085"]}}}
 {"ref":"Chaos Skills have #% increased Skill Effect Duration","better":1,"matchers":[{"string":"混沌技能效果持续时间延长 #%"},{"string":"混沌技能效果持续时间缩短 #%","negate":true}],"trade":{"ids":{"explicit":["explicit.stat_289885185"],"fractured":["fractured.stat_289885185"],"crafted":["crafted.stat_289885185"]}}}
@@ -3455,7 +3455,7 @@
 {"ref":"Cobra Lash has #% increased Projectile Speed","better":1,"matchers":[{"string":"【毒蛇鞭击】的投射物速度加快 #%"},{"string":"【毒蛇鞭击】的投射物速度减慢 #%","negate":true}],"trade":{"ids":{"enchant":["enchant.stat_732631533"]}}}
 {"ref":"Cold Exposure on Hit if you've cast Frostbite in the past 10 seconds","better":1,"matchers":[{"string":"如果你在过去 10 秒内施放过冻伤，则对冰霜曝露免疫"}],"trade":{"ids":{"explicit":["explicit.stat_1168138239"]}}}
 {"ref":"Cold Exposure you inflict applies an extra +#% to Cold Resistance","better":-1,"matchers":[{"string":"你施加的冰霜曝露使冰霜抗性额外 #%"}],"trade":{"ids":{"explicit":["explicit.stat_600221736"]}}}
-{"ref":"Cold Modifiers are #% scarcer","better":1,"matchers":[{"string":"冰霜词缀稀有度提高 #%"},{"string":"冰冷词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_3230211641"]}}}
+{"ref":"Cold Modifiers are #% scarcer","better":1,"matchers":[{"string":"冰霜词缀罕见程度提高 #%"},{"string":"冰冷词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_3230211641"]}}}
 {"ref":"Cold Resistance cannot be Penetrated","better":1,"matchers":[{"string":"冰霜抗性无法被穿透"}],"trade":{"ids":{"explicit":["explicit.stat_1864616755"]}}}
 {"ref":"Cold Resistance is #%","better":1,"matchers":[{"string":"冰霜抗性 #%"}],"trade":{"ids":{"explicit":["explicit.stat_496075050"]}}}
 {"ref":"Cold Skills have #% chance to Poison on Hit","better":1,"matchers":[{"string":"冰霜技能有 #% 的几率使敌人中毒"}],"trade":{"ids":{"explicit":["explicit.stat_2373079502"]}}}
@@ -3528,7 +3528,7 @@
 {"ref":"Creeping Frost's Chilling Area has #% increased Movement Speed","better":1,"matchers":[{"string":"【电光寒霜】的冰缓区域的蔓延速度加快 #%"},{"string":"【电光寒霜】的冰缓区域的蔓延速度减慢 #%","negate":true}],"trade":{"ids":{"enchant":["enchant.stat_2781179464"]}}}
 {"ref":"Cremation can have up to # additional Geyser at a time","better":1,"matchers":[{"string":"【火葬】技能最多同时可额外制造 # 个火泉"},{"string":"【火葬】技能最多同时可额外制造 # 个火泉"}],"trade":{"ids":{"enchant":["enchant.stat_3503624267"]}}}
 {"ref":"Crimson Dance","better":1,"matchers":[{"string":"【玫红之舞】"}],"trade":{"ids":{"explicit":["explicit.stat_300702212"],"fractured":["fractured.stat_300702212"],"scourge":["scourge.stat_300702212"]}}}
-{"ref":"Critical Modifiers are #% scarcer","better":1,"matchers":[{"string":"暴击词缀稀有度提高 #%"},{"string":"暴击词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_2390026339"]}}}
+{"ref":"Critical Modifiers are #% scarcer","better":1,"matchers":[{"string":"暴击词缀罕见程度提高 #%"},{"string":"暴击词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_2390026339"]}}}
 {"ref":"Critical Strike Chance is #% for Hits with this Weapon","better":1,"matchers":[{"string":"用该武器击中时，暴击率为 #%"}],"trade":{"ids":{"explicit":["explicit.stat_1672183492"]}}}
 {"ref":"Critical Strike Chance is increased by Overcapped Lightning Resistance","better":1,"matchers":[{"string":"暴击率随超量闪电抗性提高"}],"trade":{"ids":{"explicit":["explicit.stat_2478752719"],"fractured":["fractured.stat_2478752719"]}}}
 {"ref":"Critical Strikes deal no Damage","better":1,"matchers":[{"string":"暴击无法造成伤害"}],"trade":{"ids":{"explicit":["explicit.stat_3245481061"]}}}
@@ -3618,7 +3618,7 @@
 {"ref":"Debuffs on Monsters expire #% faster","better":1,"fromAreaMods":true,"matchers":[{"string":"怪物受到的减益效果消减速度加快 #%"},{"string":"怪物受到的减益效果消减速度减慢 #%","negate":true}],"trade":{"ids":{"explicit":["explicit.stat_1200027417"]}}}
 {"ref":"Debuffs on you expire #% faster","better":1,"matchers":[{"string":"你身上的减益效果消失速度加快 #%"},{"string":"你身上的减益效果消失速度减慢 #%","negate":true}],"trade":{"ids":{"explicit":["explicit.stat_1238227257"]}}}
 {"ref":"Debuffs on you expire #% faster while affected by Haste","better":-1,"matchers":[{"string":"受到【迅捷】影响时，你身上的负面效果消退速度减慢 #%"},{"string":"受到【迅捷】影响时，你身上的负面效果消退速度加快 #%","negate":true}],"trade":{"ids":{"explicit":["explicit.stat_207635700"]},"inverted":true}}
-{"ref":"Defence Modifiers are #% scarcer","better":1,"matchers":[{"string":"防御词缀稀有度提高 #%"},{"string":"防御词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_3215029992"]}}}
+{"ref":"Defence Modifiers are #% scarcer","better":1,"matchers":[{"string":"防御词缀罕见程度提高 #%"},{"string":"防御词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_3215029992"]}}}
 {"ref":"Defences are Zero","better":1,"matchers":[{"string":"防御为零"}],"trade":{"ids":{"explicit":["explicit.stat_4271994824"]}}}
 {"ref":"Defiance Banner has #% increased Aura Effect","better":1,"matchers":[{"string":"抗争之旗的光环效果提高 #%"},{"string":"抗争之旗的光环效果降低 #%","negate":true}],"trade":{"ids":{"enchant":["enchant.stat_1105773670"]}}}
 {"ref":"Defiance Banner has #% increased Taunt duration","better":1,"matchers":[{"string":"抗争之旗的嘲讽持续时间延长 #%"},{"string":"抗争之旗的嘲讽持续时间缩短 #%","negate":true}],"trade":{"ids":{"explicit":["explicit.stat_3556656580"]}}}
@@ -3677,7 +3677,7 @@
 {"ref":"Elemental Equilibrium","better":1,"matchers":[{"string":"元素之相"}],"trade":{"ids":{"explicit":["explicit.stat_1263158408"],"implicit":["implicit.stat_1263158408"],"fractured":["fractured.stat_1263158408"],"scourge":["scourge.stat_1263158408"]}}}
 {"ref":"Elemental Hit Always Freezes, Shocks and Ignites","better":1,"matchers":[{"string":"元素打击造成冻结、感电、点燃状态的几率 #%"},{"string":"元素打击始终造成冻结、感电、点燃状态","value":100}],"trade":{"ids":{"enchant":["enchant.stat_3205997967"]}}}
 {"ref":"Elemental Hit deals #% increased Damage","better":1,"matchers":[{"string":"【元素打击】的伤害提高 #%"},{"string":"【元素打击】的伤害降低 #%","negate":true}],"trade":{"ids":{"explicit":["explicit.stat_4109038270"],"enchant":["enchant.stat_4109038270"]}}}
-{"ref":"Elemental Modifiers are #% scarcer","better":1,"matchers":[{"string":"元素词缀稀有度提高 #%"},{"string":"元素词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_1133811301"]}}}
+{"ref":"Elemental Modifiers are #% scarcer","better":1,"matchers":[{"string":"元素词缀罕见程度提高 #%"},{"string":"元素词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_1133811301"]}}}
 {"ref":"Elemental Overload","better":1,"matchers":[{"string":"元素超载"}],"trade":{"ids":{"explicit":["explicit.stat_3574189159"],"implicit":["implicit.stat_3574189159"],"fractured":["fractured.stat_3574189159"],"scourge":["scourge.stat_3574189159"]}}}
 {"ref":"Elemental Resistances are capped by your highest Maximum Elemental Resistance instead","better":1,"matchers":[{"string":"元素抗性被你最高的元素抗性上限封顶"}],"trade":{"ids":{"explicit":["explicit.stat_3082079953"]}}}
 {"ref":"Elemental Resistances are Zero","better":1,"matchers":[{"string":"元素抗性为零"}],"trade":{"ids":{"explicit":["explicit.stat_85576425"]}}}
@@ -3776,7 +3776,7 @@
 {"ref":"Extra gore","better":1,"matchers":[{"string":"更明显打击效果"}],"trade":{"ids":{"explicit":["explicit.stat_3403461239"]}}}
 {"ref":"Eye of Winter fires Shard projectiles with #% increased Frequency during flight","better":1,"matchers":[{"string":"凛冬之眼在飞行途中发射霰弹投射物的频率提高 #%"},{"string":"凛冬之眼在飞行途中发射霰弹投射物的频率降低 #%","negate":true}],"trade":{"ids":{"enchant":["enchant.stat_173612563"]}}}
 {"ref":"Far Shot","better":1,"matchers":[{"string":"远射"}],"trade":{"ids":{"explicit":["explicit.stat_2483362276"]}}}
-{"ref":"Fire Modifiers are #% scarcer","better":1,"matchers":[{"string":"火焰词缀稀有度提高 #%"},{"string":"火焰词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_905301179"]}}}
+{"ref":"Fire Modifiers are #% scarcer","better":1,"matchers":[{"string":"火焰词缀罕见程度提高 #%"},{"string":"火焰词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_905301179"]}}}
 {"ref":"Fire Resistance cannot be Penetrated","better":1,"matchers":[{"string":"火焰抗性无法被穿透"}],"trade":{"ids":{"explicit":["explicit.stat_1138860262"],"fractured":["fractured.stat_1138860262"]}}}
 {"ref":"Fire Resistance is #%","better":1,"matchers":[{"string":"火焰抗性 #%"}],"trade":{"ids":{"explicit":["explicit.stat_763311546"]}}}
 {"ref":"Fire Skills have #% chance to Poison on Hit","better":1,"matchers":[{"string":"火焰技能有 #% 的几率使敌人中毒"}],"trade":{"ids":{"explicit":["explicit.stat_2424717327"]}}}
@@ -3992,7 +3992,7 @@
 {"ref":"Galvanic Field Chains an additional time","better":1,"matchers":[{"string":"电流场额外连锁#次"},{"string":"电流场额外连锁1次","value":1}],"trade":{"ids":{"enchant":["enchant.stat_3893203185"]}}}
 {"ref":"Galvanic Field deals #% increased Damage","better":1,"matchers":[{"string":"电流场造成的伤害增加#%"},{"string":"电流场造成的伤害减少#%","negate":true}],"trade":{"ids":{"enchant":["enchant.stat_3821213705"]}}}
 {"ref":"Galvanic Field has #% increased Cast Speed","better":1,"matchers":[{"string":"电流场的施法速度增加#%"}],"trade":{"ids":{"enchant":["enchant.stat_2364563825"]}}}
-{"ref":"Gem Modifiers are #% scarcer","better":1,"matchers":[{"string":"宝石词缀稀有度提高 #%"},{"string":"宝石词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_1049448588"]}}}
+{"ref":"Gem Modifiers are #% scarcer","better":1,"matchers":[{"string":"宝石词缀罕见程度提高 #%"},{"string":"宝石词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_1049448588"]}}}
 {"ref":"Gems can be Socketed in this Item ignoring Socket Colour","better":1,"matchers":[{"string":"技能石可以无视此物品上的插槽颜色"}],"trade":{"ids":{"explicit":["explicit.stat_899329924"],"fractured":["fractured.stat_899329924"]}}}
 {"ref":"Gems Socketed in Blue Sockets gain #% increased Experience","better":1,"matchers":[{"string":"蓝色插槽内的技能石获得的经验提高 #% "}],"trade":{"ids":{"explicit":["explicit.stat_2236460050"]}}}
 {"ref":"Gems Socketed in Green Sockets have +#% to Quality","better":1,"matchers":[{"string":"绿色插槽内的技能石 #% 品质"}],"trade":{"ids":{"explicit":["explicit.stat_3799930101"]}}}
@@ -4492,7 +4492,7 @@
 {"ref":"Life Leech effects are not removed when Unreserved Life is Filled","better":1,"matchers":[{"string":"未保留的生命全满时不会移除生命偷取效果"}],"trade":{"ids":{"explicit":["explicit.stat_2108380422"]}}}
 {"ref":"Life Leech from Exerted Attacks is instant","better":1,"matchers":[{"string":"增助攻击的生命偷取立即生效"}],"trade":{"ids":{"explicit":["explicit.stat_272906215"]}}}
 {"ref":"Life Leech from Hits with this Weapon is instant","better":1,"matchers":[{"string":"使用此武器击中敌人立即获得生命偷取"}],"trade":{"ids":{"explicit":["explicit.stat_1765389199"]}}}
-{"ref":"Life Modifiers are #% scarcer","better":1,"matchers":[{"string":"生命词缀稀有度提高 #%"},{"string":"生命词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_143694410"]}}}
+{"ref":"Life Modifiers are #% scarcer","better":1,"matchers":[{"string":"生命词缀罕见程度提高 #%"},{"string":"生命词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_143694410"]}}}
 {"ref":"Life Recovery from Flasks also applies to Energy Shield during Effect","better":1,"matchers":[{"string":"生效期间，药剂的生命回复效果也适用于能量护盾"}],"trade":{"ids":{"explicit":["explicit.stat_74462130"]}}}
 {"ref":"Life Recovery from Regeneration is not applied","better":1,"matchers":[{"string":"生命回复无效"}],"trade":{"ids":{"explicit":["explicit.stat_3947672598"]}}}
 {"ref":"Life that would be lost by taking Damage is instead Reserved\nuntil you take no Damage to Life for # second","better":1,"matchers":[{"string":"失去的生命被保留起来，\n直到你的生命在 # 秒内没有再受到伤害"},{"string":"失去的生命被保留起来，\n直到你的生命在 # 秒内没有再受到伤害"}],"trade":{"ids":{"explicit":["explicit.stat_1777740627"]}}}
@@ -4505,7 +4505,7 @@
 {"ref":"Lightning Damage of Enemies Hitting you is Lucky","better":1,"matchers":[{"string":"敌人击中你的闪电伤害会特别幸运"}],"trade":{"ids":{"explicit":["explicit.stat_4224965099"]}}}
 {"ref":"Lightning Damage with Non-Critical Strikes is Lucky","better":1,"matchers":[{"string":"非暴击造成的闪电伤害特别幸运"}],"trade":{"ids":{"explicit":["explicit.stat_1430928642"]}}}
 {"ref":"Lightning Golems deal #% increased Damage","better":1,"matchers":[{"string":"【闪电魔像】的伤害提高 #%"},{"string":"【闪电魔像】的伤害降低 #%","negate":true}],"trade":{"ids":{"enchant":["enchant.stat_3280107027"]}}}
-{"ref":"Lightning Modifiers are #% scarcer","better":1,"matchers":[{"string":"闪电词缀稀有度提高 #%"},{"string":"闪电词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_1358703397"]}}}
+{"ref":"Lightning Modifiers are #% scarcer","better":1,"matchers":[{"string":"闪电词缀罕见程度提高 #%"},{"string":"闪电词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_1358703397"]}}}
 {"ref":"Lightning Resistance cannot be Penetrated","better":1,"matchers":[{"string":"闪电抗性无法被穿透"}],"trade":{"ids":{"explicit":["explicit.stat_3515979920"]}}}
 {"ref":"Lightning Resistance does not affect Lightning Damage taken","better":1,"matchers":[{"string":"闪电抗性不对受到的闪电伤害生效"}],"trade":{"ids":{"explicit":["explicit.stat_3999959974"]}}}
 {"ref":"Lightning Resistance is #%","better":1,"matchers":[{"string":"闪电抗性 #%"}],"trade":{"ids":{"explicit":["explicit.stat_1942151132"]}}}
@@ -4554,7 +4554,7 @@
 {"ref":"Malevolence has no Reservation","better":1,"matchers":[{"string":"怨毒光环没有保留效果"}],"trade":{"ids":{"explicit":["explicit.stat_585622486"]}}}
 {"ref":"Mana Flasks gain # Charge every 3 seconds","better":1,"matchers":[{"string":"魔力药剂每 3 秒获得 # 次充能"},{"string":"魔力药剂每 3 秒获得 # 次充能"}],"trade":{"ids":{"explicit":["explicit.stat_1193925814"],"scourge":["scourge.stat_1193925814"]}}}
 {"ref":"Mana Flasks used while on Low Mana apply Recovery Instantly","better":1,"matchers":[{"string":"低魔时使用魔力药剂立即回复"}],"trade":{"ids":{"explicit":["explicit.stat_1839832419"]}}}
-{"ref":"Mana Modifiers are #% scarcer","better":1,"matchers":[{"string":"魔力词缀稀有度提高 #%"},{"string":"魔力词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_16148489"]}}}
+{"ref":"Mana Modifiers are #% scarcer","better":1,"matchers":[{"string":"魔力词缀罕见程度提高 #%"},{"string":"魔力词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_16148489"]}}}
 {"ref":"Mana Recovery occurs instantly at the end of Effect","better":1,"matchers":[{"string":"魔力回复会在效果结束时立即开始"}],"trade":{"ids":{"explicit":["explicit.stat_4204954479"],"fractured":["fractured.stat_4204954479"]}}}
 {"ref":"Mana Reservation of Herald Skills is always 45%","better":1,"matchers":[{"string":"捷光环的魔力保留总是 45%"}],"trade":{"ids":{"explicit":["explicit.stat_262773569"]}}}
 {"ref":"Manabond Penetrates #% Lightning Resistance while on Low Mana","better":1,"matchers":[{"string":"缚魔电殛在低魔状态下穿透 #% 的闪电抗性"}],"trade":{"ids":{"enchant":["enchant.stat_2052200782"]}}}
@@ -4916,7 +4916,7 @@
 {"ref":"Petrified Blood has #% increased Mana Reservation Efficiency","better":1,"matchers":[{"string":"赤血凝结的魔力保留效能提高 #%"},{"string":"赤血凝结的魔力保留效能降低 #%","negate":true}],"trade":{"ids":{"enchant":["enchant.stat_1779904215","enchant.stat_1829483269"]}}}
 {"ref":"Petrified during Effect","better":1,"matchers":[{"string":"在药剂生效期间被石化"}],"trade":{"ids":{"explicit":["explicit.stat_1935500672"]}}}
 {"ref":"Physical Damage taken bypasses Energy Shield","better":1,"matchers":[{"string":"受到的物理伤害的 #% 穿透能量护盾"},{"string":"受到的物理伤害穿透能量护盾","value":100}],"trade":{"ids":{"explicit":["explicit.stat_2649513539"]}}}
-{"ref":"Physical Modifiers are #% scarcer","better":1,"matchers":[{"string":"物理词缀稀有度提高 #%"},{"string":"物理词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_426588631"]}}}
+{"ref":"Physical Modifiers are #% scarcer","better":1,"matchers":[{"string":"物理词缀罕见程度提高 #%"},{"string":"物理词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_426588631"]}}}
 {"ref":"Plague Bearer Buff grants +#% to Poison Damage over Time Multiplier while Infecting","better":1,"matchers":[{"string":"传染时，【瘟疫使徒】增益效果 #% 中毒持续伤害加成"}],"trade":{"ids":{"enchant":["enchant.stat_1967208066"]}}}
 {"ref":"Plague Bearer deals Damage based on an additional #% of Plague Value","better":1,"matchers":[{"string":"瘟疫使徒额外根据瘟疫值的 #% 造成伤害"},{"string":"【瘟疫使徒】基于瘟疫值的 #% 造成额外伤害"}],"trade":{"ids":{"enchant":["enchant.stat_2093796647"]}}}
 {"ref":"Player Skills which Throw Mines throw up to # fewer Mines","better":1,"matchers":[{"string":"玩家投掷地雷的技能投掷的地雷数量降低 1 个","value":-1},{"string":"玩家的技能额外投掷 # 个地雷"},{"string":"玩家投掷地雷的技能投掷的地雷数量降低 # 个"},{"string":"玩家的技能额外投掷一个地雷","value":1}],"trade":{"ids":{"explicit":["explicit.stat_3633247582"],"fractured":["fractured.stat_3633247582"]}}}
@@ -5251,7 +5251,7 @@
 {"ref":"Reroll Modifier Values of each Explicit Modifier # times, keeping the best outcome","better":1,"matchers":[{"string":"重置每个外延词缀的数值 # 次，采用其中最好的结果"}],"trade":{"ids":{"necropolis":["necropolis.stat_155723177"]}}}
 {"ref":"Rerolling Favours at Ritual Altars in your Maps has no Cost the first # time","better":1,"matchers":[{"string":"在驱灵祭坛前 # 次重置恩典没有成本"},{"string":"在驱灵祭坛前 # 次重置恩典没有成本"},{"string":"第一#次在驱灵祭坛上重置恩典无需消耗"},{"string":"在你的地图中的驱灵祭坛处第#次重置恩典无消耗"},{"string":"在你的地图中的驱灵祭坛处前#次重置恩典无消耗"},{"string":"第一次在驱灵祭坛上重置恩典无需消耗","value":1}],"trade":{"ids":{"enchant":["enchant.stat_2425554673"]}}}
 {"ref":"Reserves #% of Life","better":1,"matchers":[{"string":"保留 #% 生命"}],"trade":{"ids":{"explicit":["explicit.stat_2492660287"]}}}
-{"ref":"Resistance Modifiers are #% scarcer","better":1,"matchers":[{"string":"抗性词缀稀有度提高 #%"},{"string":"抗性词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_3735181126"]}}}
+{"ref":"Resistance Modifiers are #% scarcer","better":1,"matchers":[{"string":"抗性词缀罕见程度提高 #%"},{"string":"抗性词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_3735181126"]}}}
 {"ref":"Resolute Technique","better":1,"matchers":[{"string":"坚毅之心"}],"trade":{"ids":{"explicit":["explicit.stat_3943945975"],"implicit":["implicit.stat_3943945975"],"fractured":["fractured.stat_3943945975"],"scourge":["scourge.stat_3943945975"]}}}
 {"ref":"Resolve Aegis Recovers #% faster while not losing Resolve","better":1,"matchers":[{"string":"未损失坚毅时，坚毅护盾的回复速度加快 #%"},{"string":"未损失坚毅时，坚毅护盾的回复速度减慢 #%","negate":true}],"trade":{"ids":{"explicit":["sanctum.stat_3889616543"]}}}
 {"ref":"Resolve Mitigation from Enemy Hits is based on +#% of Armour","better":1,"matchers":[{"string":"被敌人击中时的坚毅缓阻由 #% 的护甲决定"}],"trade":{"ids":{"explicit":["sanctum.stat_3621177126"]}}}
@@ -5644,7 +5644,7 @@
 {"ref":"Spectres have #% increased Damage","better":1,"matchers":[{"string":"灵体的伤害提高 #%"},{"string":"灵体的伤害降低 #%","negate":true}],"trade":{"ids":{"implicit":["implicit.stat_3645693773"],"enchant":["enchant.stat_3645693773"]}}}
 {"ref":"Spectres have #% increased maximum Life","better":1,"matchers":[{"string":"灵体的最大生命提高 #%"},{"string":"灵体的最大生命降低 #%","negate":true}],"trade":{"ids":{"explicit":["explicit.stat_3035514623"]}}}
 {"ref":"Spectres have a Base Duration of # seconds\nSpectres do not travel between Areas","better":1,"matchers":[{"string":"灵体的基础持续时间为 # 秒\n灵体无法在区域之间转移"}],"trade":{"ids":{"explicit":["explicit.stat_1210937073"]}}}
-{"ref":"Speed Modifiers are #% scarcer","better":1,"matchers":[{"string":"速度词缀稀有度提高 #%"},{"string":"速度词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_3589305647"]}}}
+{"ref":"Speed Modifiers are #% scarcer","better":1,"matchers":[{"string":"速度词缀罕见程度提高 #%"},{"string":"速度词缀的出现几率总降 #%"}],"trade":{"ids":{"necropolis":["necropolis.stat_3589305647"]}}}
 {"ref":"Spell Hits have #% chance to Hinder you","better":1,"matchers":[{"string":"法术击中有 #% 的几率使你缓速"},{"string":"法术击中使你缓速","value":100}],"trade":{"ids":{"scourge":["scourge.stat_1533511331"]}}}
 {"ref":"Spell Skills always deal Critical Strikes on final Repeat","better":1,"matchers":[{"string":"法术技能最后一次重复始终暴击"}],"trade":{"ids":{"explicit":["explicit.stat_3738009328"]}}}
 {"ref":"Spell Skills cannot deal Critical Strikes except on final Repeat","better":1,"matchers":[{"string":"法术技能只能在最后一次重复暴击"}],"trade":{"ids":{"explicit":["explicit.stat_2516869940"]}}}
@@ -6846,3 +6846,12 @@
 {"ref":"Zealotry has #% increased Aura Effect","better":1,"matchers":[{"string":"【奋锐光环】的光环效果提高 #%"},{"string":"【奋锐光环】的光环效果降低 #%","negate":true}],"trade":{"ids":{"explicit":["explicit.stat_4096052153"],"implicit":["implicit.stat_4096052153"]}}}
 {"ref":"Zealotry has #% increased Mana Reservation Efficiency","better":1,"matchers":[{"string":"奋锐光环的魔力保留效能提高 #%"},{"string":"奋锐光环的魔力保留效能降低 #%","negate":true}],"trade":{"ids":{"explicit":["explicit.stat_168308685","explicit.stat_4216444167"],"enchant":["enchant.stat_168308685","enchant.stat_4216444167"]}}}
 {"ref":"Zealotry has no Reservation","better":1,"matchers":[{"string":"奋锐光环没有保留效果"}],"trade":{"ids":{"explicit":["explicit.stat_1741242318"]}}}
+{"ref":"Monsters have a #% chance to Ignite, Freeze and Shock on Hit","better":1,"fromAreaMods":true,"fromUberAreaMods":true,"fromHeistAreaMods":true,"matchers":[{"string":"怪物击中时有 #% 的几率造成点燃、冻结和感电"},{"string":"Monsters Ignite, Freeze and Shock on Hit","value":100}],"trade":{"ids":{"explicit":["explicit.stat_2553656203"],"fractured":["fractured.stat_2553656203"]}}}
+{"ref":"More Currency: #%","better":1,"matchers":[{"string":"更多通货: #% "}],"trade":{"ids":{"pseudo":["pseudo.pseudo_map_more_currency_drops"]}}}
+{"ref":"More Maps: #%","better":1,"matchers":[{"string":"更多地图: #% "}],"trade":{"ids":{"pseudo":["pseudo.pseudo_map_more_map_drops"]}}}
+{"ref":"More Scarabs: #%","better":1,"matchers":[{"string":"更多圣甲虫: #% "}],"trade":{"ids":{"pseudo":["pseudo.pseudo_map_more_scarab_drops"]}}}
+{"ref":"Rare and Unique Monsters remove #% of Life, Mana and Energy Shield from Players or their Minions on Hit","better":1,"fromUberAreaMods":true,"matchers":[{"string":"稀有与传奇怪物被击中时，移除 #% 玩家和召唤生物的生命、魔力和能量护盾"}],"trade":{"ids":{"explicit":["explicit.stat_3270788481"],"fractured":["fractured.stat_3270788481"]}}}
+{"ref":"Reforge socket links # times, keeping the greatest number of links","better":1,"matchers":[{"string":"重铸插槽链接 # 次，采用链接最多的结果"}],"trade":{"ids":{"necropolis":["necropolis.stat_2313200362"]}}}
+{"ref":"Reforge socket numbers # times, keeping the greatest number of sockets","better":1,"matchers":[{"string":"重铸插槽数量 200 次，采用插槽最多的结果"}],"trade":{"ids":{"necropolis":["necropolis.stat_3140088802"]}}}
+{"ref":"Warlord's Call","better":1,"matchers":[{"string":"Warlord's Call"}],"trade":{"ids":{"explicit":["explicit.stat_3292262540"],"fractured":["fractured.stat_3292262540"],"scourge":["scourge.stat_3292262540"]}}}
+{"ref":"When a fifth Impale is inflicted on a Player,\nImpales are removed to Reflect their Physical Damage multiplied\nby their remaining Hits to that Player and their Allies within 1.8 metres","better":1,"fromUberAreaMods":true,"matchers":[{"string":"对玩家施加第五次穿刺时，移除穿刺效果，并对该玩家及其 # 米内的友军反射物理伤害，数值为伤害与剩余击中次数的乘数"}],"trade":{"ids":{"explicit":["explicit.stat_1353527704"],"fractured":["fractured.stat_1353527704"]}}}

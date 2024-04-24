@@ -493,17 +493,6 @@ export function createTradeRequest (filters: ItemFilters, stats: StatFilter[], i
     }
   }
 
-  if (item.mapTier === 17 &&
-    !stats.some(s => s.statRef === 'Players who Die in area are sent to the Void')) {
-    const reducedEffectId = STAT_BY_REF('Players who Die in area are sent to the Void')!.trade.ids[ModifierType.Explicit][0]
-    query.stats.push({
-      type: 'not',
-      filters: [
-        { id: reducedEffectId }
-      ]
-    })
-  }
-
   stats = stats.filter(stat => !INTERNAL_TRADE_IDS.includes(stat.tradeId[0] as any))
   if (filters.veiled) {
     for (const statRef of filters.veiled.statRefs) {
