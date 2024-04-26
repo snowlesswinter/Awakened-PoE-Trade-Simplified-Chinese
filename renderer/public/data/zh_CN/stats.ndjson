@@ -3507,7 +3507,7 @@
 {"ref":"Creates a Belt","better":1,"matchers":[{"string":"制作一条腰带"},{"string":"制造 1 个腰带"}],"trade":{"ids":{"necropolis":["necropolis.stat_1241074775"]}}}
 {"ref":"Creates a Bone Ring","better":1,"matchers":[{"string":"制作一个骨环"},{"string":"制造 1 个骨环"}],"trade":{"ids":{"necropolis":["necropolis.stat_480698631"]}}}
 {"ref":"Creates a Cerulean Ring","better":1,"matchers":[{"string":"制作一个天蓝之戒"},{"string":"制造 1 个天蓝之戒"}],"trade":{"ids":{"necropolis":["necropolis.stat_2211551537"]}}}
-{"ref":"Creates a Grasping Mail","better":1,"matchers":[{"string":"Creates a Grasping Mail"}],"trade":{"ids":{"necropolis":["necropolis.stat_1347129246"]}}}
+{"ref":"Creates a Grasping Mail","better":1,"matchers":[{"string":"制作扼杀链甲"}],"trade":{"ids":{"necropolis":["necropolis.stat_1347129246"]}}}
 {"ref":"Creates a Helmet, Gloves or Boots with Ward","better":1,"matchers":[{"string":"制作一个具有结界的头盔、手套或靴子"},{"string":"制造 1 个带有结界的头盔、手套或靴子"}],"trade":{"ids":{"necropolis":["necropolis.stat_993789944"]}}}
 {"ref":"Creates a Minion Wand","better":1,"matchers":[{"string":"制作一个召唤生物法杖"},{"string":"制造 1 个召唤生物法杖"}],"trade":{"ids":{"necropolis":["necropolis.stat_1935938852"]}}}
 {"ref":"Creates a Ring","better":1,"matchers":[{"string":"制作一个戒指"},{"string":"制造 1 个戒指"}],"trade":{"ids":{"necropolis":["necropolis.stat_692790602"]}}}
