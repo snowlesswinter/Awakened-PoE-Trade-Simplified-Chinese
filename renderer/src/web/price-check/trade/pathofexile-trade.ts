@@ -1,5 +1,5 @@
 import { ItemInfluence, ItemCategory, ParsedItem, ItemRarity } from '@/parser'
-import {ItemFilters, StatFilter, INTERNAL_TRADE_IDS, InternalTradeId, SaleType} from '../filters/interfaces'
+import { ItemFilters, StatFilter, INTERNAL_TRADE_IDS, InternalTradeId, SaleType } from '../filters/interfaces'
 import { setProperty as propSet } from 'dot-prop'
 import { DateTime } from 'luxon'
 import { Host } from '@/web/background/IPC'
