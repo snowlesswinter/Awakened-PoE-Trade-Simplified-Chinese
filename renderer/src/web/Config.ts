@@ -6,6 +6,7 @@ import type * as widget from './overlay/widgets'
 import type { StashSearchWidget } from './stash-search/widget'
 import type { ItemCheckWidget } from './item-check/widget'
 import type { ItemSearchWidget } from './item-search/widget'
+import { SaleType } from '@/web/price-check/filters/interfaces'
 
 const _config = shallowRef<Config | null>(null)
 let _lastSavedConfig: Config | null = null
@@ -122,6 +123,7 @@ export interface Config {
   widgets: widget.Widget[]
   fontSize: number
   showAttachNotification: boolean
+  defaultSaleType: SaleType
 }
 
 export const defaultConfig = (): Config => ({
@@ -165,6 +167,7 @@ export const defaultConfig = (): Config => ({
   language: 'zh_CN',
   cookies: '',
   realm: 'pc-ggg',
+  defaultSaleType: SaleType.ANY,
   fontSize: 16,
   widgets: [
     // --- REQUIRED ---

@@ -259,7 +259,7 @@ export function createTradeRequest (filters: ItemFilters, stats: StatFilter[], i
       stats: [
         { type: 'and', filters: [] }
       ],
-      filters: AppConfig().realm === 'pc-tencent' ? { trade_filters: { filters: { sale_type: { option: 'any' } } } } : {}
+      filters: AppConfig().realm === 'pc-tencent' ? { trade_filters: { filters: { sale_type: { option: AppConfig().defaultSaleType } } } } : {}
     },
     sort: {
       price: 'asc'
