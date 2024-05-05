@@ -1,5 +1,5 @@
 import { ItemInfluence, ItemCategory, ParsedItem, ItemRarity } from '@/parser'
-import { ItemFilters, StatFilter, INTERNAL_TRADE_IDS, InternalTradeId } from '../filters/interfaces'
+import {ItemFilters, StatFilter, INTERNAL_TRADE_IDS, InternalTradeId, SaleType} from '../filters/interfaces'
 import { setProperty as propSet } from 'dot-prop'
 import { DateTime } from 'luxon'
 import { Host } from '@/web/background/IPC'
@@ -259,13 +259,18 @@ export function createTradeRequest (filters: ItemFilters, stats: StatFilter[], i
       stats: [
         { type: 'and', filters: [] }
       ],
-      filters: AppConfig().realm === 'pc-tencent' ? { trade_filters: { filters: { sale_type: { option: AppConfig().defaultSaleType } } } } : {}
+      filters: {}
     },
     sort: {
       price: 'asc'
     }
   }
   const { query } = body
+
+  if (AppConfig().realm === 'pc-tencent') {
+    const saleType = AppConfig().defaultSaleType ?? SaleType.ANY
+    propSet(query.filters, 'trade_filters.filters.sale_type.option', saleType)
+  }
 
   if (filters.trade.currency) {
     propSet(query.filters, 'trade_filters.filters.price.option', filters.trade.currency)
