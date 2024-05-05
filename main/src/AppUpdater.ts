@@ -68,6 +68,7 @@ export class AppUpdater {
 
   private check = async () => {
     try {
+      console.log(`${autoUpdater.getFeedURL()}`)
       await autoUpdater.checkForUpdates()
     } catch {
       // handled by event
