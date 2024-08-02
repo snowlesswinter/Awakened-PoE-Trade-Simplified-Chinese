@@ -169,7 +169,7 @@
     "heistequipment_heistweapon": "夺宝装置",
     "heistequipment_heistutility": "夺宝斗篷",
     "accessory_trinket": "饰品",
-    "azmeri_tincture": "酊剂",
+    "tincture": "酊剂",
     "azmeri_charm": "咒符"
   },
   "filters": {
